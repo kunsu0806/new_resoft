@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/business.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/01f338039f.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- underline-animation-->
+    <script src="./js/underline-animation2.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container" id="business">
+            <h1>
+                <!-- Resoft Logo -->
+                <a href="main.html"><img src="./img/Header-Logo.svg"></a>
+            </h1>
+                <!-- Nav Bar -->
+            <nav>
+                <ul id="nav-bar">
+                    <li class="btn-one">
+                        <a href="company.html" class="one-cl">회사소개</a>
+                    </li>
+                    <li class="btn-two">
+                        <a href="#business" class="two-cl">사업현황</a>
+                    </li>
+                    <li class="btn-three">
+                        <a href="information.html" class="three-cl">정보마당</a>
+                    </li>
+                    <li class="bottom-line"></li>
+
+                <!-- Hamberger Button -->
+                    <li class="btn">
+                        <button type="button" onclick="doDisplay()"><i class="fa-solid fa-bars" style="color:black"></i></button>
+                    </li>
+                </ul>
+            </nav>
+                
+        </div>
+
+        <!-- business header -->
+        <div id="business-header">
+            <h1>사업현황</h1>
+        </div>
+
+
+
+
+                <!-- Hamberger Navbar -->
+        <div id="myNav" class="overlay">
+            <div class="overlay-content">
+                <a href="#">REsoft소개</a>
+                <a href="#">연혁</a>
+                <a href="#">조직도</a>
+                <a href="#">특허&인증</a>
+                <a href="#">오시는 길</a>
+            </div>
+            <div class="overlay-content">
+                <a href="#">ECOCE</a>
+                <a href="#">moaDo</a>
+                <a href="#">Etc</a>
+              </div>
+              <div class="overlay-content">
+                <a href="#">REsoft소식</a>
+              </div>
+        </div>
+
+        <!-- Hamberger Script -->
+        <script> 
+            var bDisplay = true; 
+            function doDisplay(){ 	
+                var con = document.getElementById("myNav"); 	
+                if(con.style.display=='none'){ 		
+                    con.style.display = 'block'; 	
+                }else{ 		
+                    con.style.display = 'none'; 	
+                } 
+            } 
+        </script>
+    </header>
+
+    <!------------------------- footer ------------------------------->
+    <footer id="footer">
+        <div class="footer-wrap">
+            <div class="footer-logo">
+                <img src="./img/resoft.png" alt="">
+            </div>
+
+            <div class="address">
+                <p class="footer-add">© RESOFT CO.LTD. All Rights Reserved.</p>  
+                <p class="footer-inform">
+                    <span>상호 : (주)리소프트</span>
+                    <br>
+                    <span>사업자등록번호 : 722-81-02219</span>
+                    <br>
+                    <span>주소 : (41260) 대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호 (신천동 106)</span>
+                </p>
+                <p class="footer-inform-add">
+                    <span>대표이사 : 오유나</span>&nbsp;&nbsp;
+                    <span>개인정보책임자 : 이현지</span>
+                    <br/>
+                    <span>전화 : (053) 475-2110</span>&nbsp;&nbsp;&nbsp; 
+                    <span>팩스 : (0504) 257-5966</span>&nbsp;&nbsp;&nbsp;
+                    <span>이메일 : call@resoft.kr</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

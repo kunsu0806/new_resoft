@@ -1,0 +1,85 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap');
+
+
+body {
+    padding: 0 20px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+  
+.mynav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+.mynav li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.mynav a {
+    display: block;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    padding: 7px 15px;
+}
+
+.target {
+    position: absolute;
+    border-bottom: 4px solid transparent;
+    z-index: -1;
+    transform: translateX(-60px);
+}
+
+.mynav a,
+.target {
+    transition: all .35s ease-in-out;
+}
+
+.mynav a:hover {
+    color: blue;
+}
+
+
+/*********** secvice ***********/
+
+.r-card {
+    position: relative;
+}
+
+.r-img-title,
+.r-img-desc {
+    text-align: center;
+    top: 0;
+    left: 0;
+}
+
+.r-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.r-card:hover .r-img-overlay {
+    opacity: 1;
+}
+
+.r-img-hdesc {
+    font-size: 26px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateZ(-150%, -150%);
+    text-align: center;
+}

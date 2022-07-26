@@ -1,0 +1,213 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/company.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/01f338039f.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- underline-animation-->
+    <script src="./js/underline-animation1.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container" id="company">
+            <h1>
+                <!-- Resoft Logo -->
+                <a href="main.html"><img src="./img/Header-Logo.svg"></a>
+            </h1>
+                <!-- Nav Bar -->
+            <nav>
+                <ul id="nav-bar">
+                    <li class="btn-one">
+                        <a href="#company" class="one-cl">회사소개</a>
+                    </li>
+                    <li class="btn-two">
+                        <a href="business.html" class="two-cl">사업현황</a>
+                    </li>
+                    <li class="btn-three">
+                        <a href="information.html" class="three-cl">정보마당</a>
+                    </li>
+                    <li class="bottom-line"></li>
+
+                <!-- Hamberger Button -->
+                    <li class="btn">
+                        <button type="button" onclick="doDisplay()"><i class="fa-solid fa-bars" style="color:black"></i></button>
+                    </li>
+                </ul>
+            </nav>
+                
+        </div>
+
+        <!-- company header -->
+        <div id="company-header">
+            <h1>회사소개</h1>
+        </div>
+
+        <!-- Hamberger Navbar -->
+        <div id="myNav" class="overlay">
+            <div class="overlay-content">
+                <a href="#">REsoft소개</a>
+                <a href="#">연혁</a>
+                <a href="#">조직도</a>
+                <a href="#">특허&인증</a>
+                <a href="#">오시는 길</a>
+            </div>
+            <div class="overlay-content">
+                <a href="#">ECOCE</a>
+                <a href="#">moaDo</a>
+                <a href="#">Etc</a>
+              </div>
+              <div class="overlay-content">
+                <a href="#">REsoft소식</a>
+              </div>
+        </div>
+
+        <!-- Hamberger Script -->
+        <script> 
+            var bDisplay = true; 
+            function doDisplay(){ 	
+                var con = document.getElementById("myNav"); 	
+                if(con.style.display=='none'){ 		
+                    con.style.display = 'block'; 	
+                }else{ 		
+                    con.style.display = 'none'; 	
+                } 
+            } 
+        </script>
+    </header>
+
+    <!--------------------------------------------  Resoft 소개   --------------------------------------------->
+    <div id="introduce-resoft">
+        <div>
+            <div class="introduce-title">
+                <p class="title-m">REsoft 소개</p>
+                <p class="title-sub">ABOUT US</p>
+            </div>
+        </div>
+        <div>
+            <table class="info-container">
+                <tbody>
+                    <tr class="info-box">
+                        <td class="info-p"><p>회사명</p></td>
+                        <td class="info-p2" ><p>(주)리소프트</p></td>
+                    </tr>
+                    
+                    <tr class="info-box">
+                        <td class="info-p"><p>설립일</p></td>
+                        <td class="info-p2"><p>2021년 5월 6일</p></td>
+                    </tr>
+
+                    <tr class="info-box">
+                        <td class="info-p"><p>대표이사</p></td>
+                        <td class="info-p2"><p>오유나</p></td>
+                    </tr>
+
+                    <tr class="info-box">
+                        <td class="info-p"><p>주요 사업</p></td>
+                        <td class="info-p2"><p>모바일 플랫폼 개발</p></td>
+                    </tr>
+
+                    <tr class="info-box">
+                        <td class="info-p"><p>본사</p></td>
+                        <td class="info-p2"><p>대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호</p></td>
+                    </tr>
+
+                    <tr class="info-box">
+                        <td class="info-p">
+                            <p>부설연구소</p>
+                        </td>
+                        <td class="info-p2">
+                            <p>대구광역시 수성구 알파시티1로 160, SW융합테크비즈센터(Dnex) 305호</p>
+                        </td>
+                    </tr>
+
+                    <tr class="info-box">
+                        <td class="info-p">
+                            <p>연락처</p>
+                        </td>
+                        <td class="info-p2">
+                            <p>TEL. (053) 475-2110 / FAX. (0504) 257-5966 / E-mail. call@resoft.kr</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+<!--------------------- 연혁 --------------------------->
+    <section id="history">
+        <div class="history-title">
+            <p>연혁</p>
+            <span>history</span>
+        </div>
+        <div class="history-desc">
+            <div>
+                <p>2022</p>
+                <ol>1</ol>
+            </div>
+            <div>
+                <p>2021</p>
+                <ol>12
+                    <li>대구여성인력개발센터 MOU 협약(여성IT인재 현장실습)</li>
+                    <li>대구가톨릭대학교 계약학과 MOU 협약 (ICTAI융합학과)</li>
+                    <li>기업부설연구소(연구개발전담부서) 등록</li>
+                </ol>
+                <ol>11
+                    <li>제 38류, 제 45류 상표등록 출원 (Mmate : 제 40-1799224호, 제 40-1799225호)</li>
+                </ol>
+                <ol>10
+                    <li>서울특별시 송파구청 앱 개발 (제8회 한성백제마라톤 비대면 대회)</li>
+                    <li>대구광역시체육회 앱 개발 (2021 대구 마스크쓰햬 컬러풀 핫플 걷기)</li>
+                    <li>대구광역시 달서구체육회 앱 개발 (제15회 언택트 달서 하프마라톤 대회)</li>
+                </ol>
+                <ol>9
+                    <li>대구 경북지방중소벤처기업청 여성기업 등록</li>
+                </ol>
+                <ol>8
+                    <li>구미대학교 MOU 협약 (현장실습학기제)</li>
+                </ol>
+                <ol>5
+                    <li>(주)리소프트 회사 설립</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+
+    <!------------------------- footer ------------------------------->
+    <footer id="footer">
+        <div class="footer-wrap">
+            <div class="footer-logo">
+                <img src="./img/resoft.png" alt="">
+            </div>
+
+            <div class="address">
+                <p class="footer-add">© RESOFT CO.LTD. All Rights Reserved.</p>  
+                <p class="footer-inform">
+                    <span>상호 : (주)리소프트</span>
+                    <br>
+                    <span>사업자등록번호 : 722-81-02219</span>
+                    <br>
+                    <span>주소 : (41260) 대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호 (신천동 106)</span>
+                </p>
+                <p class="footer-inform-add">
+                    <span>대표이사 : 오유나</span>&nbsp;&nbsp;
+                    <span>개인정보책임자 : 이현지</span>
+                    <br/>
+                    <span>전화 : (053) 475-2110</span>&nbsp;&nbsp;&nbsp; 
+                    <span>팩스 : (0504) 257-5966</span>&nbsp;&nbsp;&nbsp;
+                    <span>이메일 : call@resoft.kr</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

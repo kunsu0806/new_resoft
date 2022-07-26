@@ -1,0 +1,321 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+li {
+    list-style: none;
+}
+
+
+/********************************* 헤더부분 *************************************/
+header {
+    width: 100%;
+    z-index: 1000;
+    top:0;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between; /* 양 끝으로 배치 */
+    align-items: center;
+    width: 100%;
+    border: 1px solid #DBDBDB;
+    height: 80px;
+}
+
+header nav ul{
+    position: relative;
+}
+
+header nav ul li{
+    padding: 2rem;
+    display: inline-block;
+}
+
+header button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+}
+/******************nav bar animation *********************/
+#nav-bar a{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.bottom-line {
+    position:absolute;
+    top:70px;
+    left:2rem;
+    width:80px;
+    height:5px;
+    border-radius: 5px;
+    background-color: blue;
+    padding: 0;
+}
+.bottom-active {
+    transform: translate3d(0%, 0, 0);
+    transition:all linear 240ms;
+}
+.bottom-active1 {
+    transform: translate3d(188%, 0, 0);
+    transition:all linear 240ms;
+}
+.bottom-active2 {
+    transform: translate3d(373%, 0, 0);
+    transition:all linear 240ms;
+}
+
+.color,
+.color1,
+.color2 {
+    color: blue !important;
+    transition: all linear 100ms;
+}
+
+/************************************* 로고 ****************************************/
+header h1 a { 
+    margin-left: 360px;
+}
+header h1 a img {
+    width: 133px;
+    height: 30px;
+}
+
+/*************************** 메뉴 ********************************/
+header nav ul li button {
+    font-size: 20px;
+}
+header nav ul li.btn button {
+    margin-right: 220px;
+    margin-left: 30px;
+    font-size: 32px;
+}
+
+/********************* company-header ***********************/
+#company-header {
+    background: url(../img/company-main.png) no-repeat center;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#company-header h1 {
+    color: white;
+}
+
+/************************** Hidden **************************/
+.overlay {
+    height: 210px;
+    width: 100%;
+    z-index: 1;
+    top: 80px;
+    left: 0;
+    background-color: rgba(47, 88, 163, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+    position: absolute;
+}
+
+.overlay-content {
+    float: left;
+    top: 10%;
+    text-align: left;
+    margin-right: 50px;
+    margin-top: 15px;
+    line-height: 0.7;
+}
+.overlay-content:first-child {
+    margin-left: 1140px;
+}
+.overlay-content:nth-child(2) {
+    margin-left: -18px;
+}
+.overlay-content:last-child {
+    margin-left: 15px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: black;
+}
+
+/*************** 회사소개 - REsoft소개 ****************/
+#introduce-resoft {
+    width: 100%;
+    height: 656px;
+    margin: 100px 0 100px 240px;
+}
+
+.title-m {
+    font: bold 40px/58px Noto Sans KR;
+    color: #1E1E1E;
+}
+
+.title-sub {
+    font: medium 18px/26px Noto Sans KR;
+    color: #C8C8C8;
+}
+
+.info-container {
+    position:relative;
+    border-collapse: collapse;
+    width: 1440px;
+    height: 522px;
+    margin-top: 50px;
+}
+
+.info-p {
+    font:  bold 24px/50px Noto Sans KR;
+    letter-spacing: 1.2px;
+    color: #1E1E1E;
+    text-align:center;
+}
+
+.info-p p {
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 12.3px;
+}
+
+.info-p2 {
+    font: normal 20px/30px Noto Sans KR;
+    color: #959595; 
+}
+
+.info-p2 p {
+    margin-left: 280px;
+    margin-top: 22.3px;
+}
+
+ /****************** 회사소개 RESOFT소개 밑줄 ****************/
+.info-box{
+    border-bottom: 1px solid #C8C8C8;
+    margin: 0;
+}
+
+/********************* history ********************/
+#history {
+    width: 1920px;
+    height: 1314px;
+    background-color: #F9F9F9;
+}
+
+.history-title p {
+    position: relative;
+    font-size: 40px;
+    padding-top: 100px;
+    margin-left: 240px;
+}
+.history-title span {
+    margin-left: 255px;
+}
+
+
+.history-desc {
+    width: 1140px;
+    height: 940px;
+    margin-left: 540px;
+    display: flex;
+}
+
+.history-desc p {
+    font-size: 50px;
+    position: relative;
+    line-height: 1;
+    display: inline-block;
+}
+
+.history-desc ol {
+    display: inline-block;
+    font-size: 32px;
+}
+
+.history-desc ol:before {
+    content:"";
+    position: absolute;
+    left: 55%;
+    transform: translateY(25%);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 15px solid black;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+/***************** footer ********************/
+.footer-wrap {
+    position: relative;
+    left: 0;
+    width: 1920px;
+    height: 250px;
+    background: #E9E9E9 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.footer-wrap img {
+    width:200px;
+    height:45px;
+    margin-top:50px;
+    margin-left:240px;
+}
+.footer-wrap .address {
+    letter-spacing: 0px;
+    line-height: 26px;
+    color: #9E9E9E;
+    opacity: 1;
+    text-align: left; 
+}
+.footer-wrap .address .footer-add {
+    position: relative;
+    height: 24px;
+    left: 460px;
+    bottom:20px;
+    font-size: 24px;
+}
+.footer-wrap .address .footer-inform {
+    position: relative;
+    margin-left: 240px;
+    padding-bottom: 49px;
+    height:76px;
+}
+.footer-wrap .address .footer-inform-add {
+    position:relative;
+    left: 1000px;
+    bottom: 50px;
+    height: 50px;
+    margin-top: -25px;
+}
