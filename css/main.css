@@ -633,6 +633,8 @@ span.cbp-biprev:before {
     display: table;
     table-layout: fixed;
     text-align: center;
+	background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
 }
 
 .web {
@@ -646,6 +648,8 @@ span.cbp-biprev:before {
     display: table;
     table-layout: fixed;
     text-align: center;
+		background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
 }
 
 .ai {
@@ -658,6 +662,8 @@ span.cbp-biprev:before {
     display: table;
     table-layout: fixed;
     text-align: center;
+		background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
 }
 
 .xr {
@@ -671,6 +677,8 @@ span.cbp-biprev:before {
     display: table;
     table-layout: fixed;
     text-align: center;
+		background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
 }
 
 .right .front,
