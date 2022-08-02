@@ -21,3 +21,7 @@ items.forEach((item, index) => {
   });
   item.classList.contains("is-active") && handleIndicator(item);
 });
+
+function preventClick(e){
+  e.preventDefault()
+}

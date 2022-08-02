@@ -24,6 +24,8 @@
 body {
     max-width: 1920px;
     margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 li {
     list-style: none;
@@ -84,8 +86,6 @@ header nav ul li.btn button {
     font-size: 32px;
 }
 
-
-/* position relative를 제거 */
 .hd-1 {
     position: absolute;
     top: 400px;
@@ -108,35 +108,16 @@ header nav ul li.btn button {
     width: 60%;
 }
 
-.hd-1 img {
-    margin-top: 80px;
-    opacity: 0.5;
-}
-.hd-1 img.left{
-    width: 60px;
-    height: 40px;
-}
-.hd-1 img.center{
-    width: 15px;
-    height: 21px;
-    margin-bottom: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-.hd-1 img.right{
-    width: 60px;
-    height: 40px;
-}
-
 /************************* nav-bar ****************************/
-
+.nav {
+    margin-right: -9px;   
+}
 #nav-bar a {
     font-weight: bold;
     color: white;
     text-decoration: none;
     font-size: 20px;
 }
-
 
 #nav-bar a:hover {
     color: rgb(9, 89, 209);
@@ -153,6 +134,7 @@ header nav ul li.btn button {
     overflow: hidden;
     transition: 0.5s;
     position: absolute;
+    display: none;
 }
 
 .overlay-content {
@@ -164,7 +146,7 @@ header nav ul li.btn button {
     line-height: 0.7;
 }
 .overlay-content:first-child {
-    margin-left: 1153px;
+    margin-left: 1160px;
 }
 .overlay-content:nth-child(2) {
     margin-left: -22px;
@@ -207,7 +189,7 @@ header nav ul li.btn button {
 	-webkit-transition: opacity 1s;
 	-moz-transition: opacity 1s;
 	transition: opacity 1s;
-    filter: brightness(30%);
+    filter: brightness(70%);
 }
 
 .backgroundsize .cbp-bislideshow li {
@@ -359,7 +341,6 @@ span.cbp-biprev:before {
     background-color: #C8C8C8;
 }
 
-
 .news .cont .link a {
     text-decoration: none;
     width: 300px;
@@ -405,8 +386,6 @@ span.cbp-biprev:before {
     color: #AAAAAA;
     letter-spacing: 0.8px;
 }
-
-
 /********************* project ***********************/
 .pject-wrap {
     background: #F9F8FF;
@@ -452,6 +431,9 @@ span.cbp-biprev:before {
 .motion-pic-1 {
     margin-top: 61px;
 }
+.motion-pic-2 {
+    display: none;
+}
 
 .pject-con-right {
     margin-top: 111px;
@@ -459,9 +441,9 @@ span.cbp-biprev:before {
 
 .ecoce-back-img {
     border-radius: 10px;
-    width: 450px;
-    height: 355px;
-    background: transparent url('../image2/square674.png') 0% 0% no-repeat padding-box;
+    width: 534px;
+    height: 393px;
+    background: transparent url('../img/square674.png') 0% 0% no-repeat padding-box;
     background-position: center;
 }
 
@@ -480,8 +462,10 @@ span.cbp-biprev:before {
 .pject-ecoce-wrap {
     overflow: hidden;
     position: relative;
-    width: 450px;
-    height: 355px;
+    width: 534px;
+    height: 393px;
+    margin-left: 90px;
+    border-radius: 10px;
 }
 
 .pject-ecoce-wrap figcaption,
@@ -516,7 +500,7 @@ span.cbp-biprev:before {
     border-radius: 10px;
     width: 450px;
     height: 355px;
-    background: transparent url('../image2/main-visual.png') 0% 0% no-repeat padding-box;
+    background: transparent url('../img/main-visual.png') 0% 0% no-repeat padding-box;
 }
 
 .pject-moado-wrap {
@@ -524,13 +508,72 @@ span.cbp-biprev:before {
     position: relative;
     border-radius: 10px;
     margin-top: 50px;
-    width: 450px;
-    height: 355px;
-    background: url('../image2/square\ 38.jpg') no-repeat center;
+    width: 534px;
+    height: 393px;
+    margin-left: 90px;
+    background: url('../img/square\ 38.jpg') no-repeat center;
 }
 
 .pject-moado-wrap figcaption {
     padding-top: 285px;
+}
+
+/************* Resoft project ****************/
+@media (min-width: 768px) and (max-width: 1279px) {
+    .pject-wrap {
+        width: 100%;
+        height: 1911px;
+        z-index: 80;
+        position: relative;
+    }
+    .pject-con-wrap {
+        margin: 0 auto;
+        display: block;
+    }
+    
+    
+    .pject-con-wrap {
+        padding-top: 100px;
+    }
+    
+    .pject-text {
+        text-align: center;
+        margin-top: -960px;
+    }
+    
+    .pject-text h2 {
+        font-weight: bold;
+        font-size: 40px;
+        color: #1E1E1E;
+    }
+    
+    .pject-text .pject-eng {
+        color: #C8C8C8;
+        padding-bottom: 50px;
+        font-weight: Medium;
+        font-size: 18px;
+    }
+    
+    .pject-text .pject-con {
+        color: #1E1E1E;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 2;
+        letter-spacing: -0.5;
+    }
+    .motion-pic-1 {
+        display: none;
+    }
+    .motion-pic-2 {
+        display: block;
+        margin-left: 300px;
+    }
+    /**/
+    
+    .pject-ecoce-wrap {
+        margin-left: 373px;
+        
+    }
 }
 
 /**************** secvice *****************/
@@ -544,6 +587,10 @@ span.cbp-biprev:before {
     /* background-color: red; */
     display: flex;
     gap: 80px;
+}
+
+.service .title p {
+    margin-left: 10px;
 }
 
 
@@ -790,4 +837,64 @@ span.cbp-biprev:before {
     bottom: 50px;
     height: 50px;
     margin-top: -25px;
+}
+
+/* 
+현재 만들어야 하는 기준 => 모바일은 그대로 적용, 테블릿은 1024px까지
+
+@media (max-width: 767px){
+	//모바일
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    // 테블릿 가로 
+}
+@media (min-width: 1280px) and (max-width: 1920px) {
+    // 데스크탑 일반 => 구현 마무리
+}*/
+
+
+
+/************** media query 1. Header tablet (테블릿 가로)****************/
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    /******* header *******/
+    header h1 a {    
+        margin-left: 231.07px;
+    }
+    header nav ul li{
+        margin-left: 88px;;
+        margin-right: -100px;
+    }
+    .overlay-content:first-child {
+        margin-left: 672px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: -32px;
+    }
+    .overlay-content:last-child {
+        margin-left: -3px;
+    }
+    .hd-1 {
+        margin-left: -113px;
+        margin-top: 65px;
+        line-height: 1.5;
+    }
+    .hd-1 p.main-text {
+        letter-spacing: 1.1;
+    }
+    .hd-1 p.sub-text {
+        letter-spacing: 0.24;
+    }
+    .cbp-bicontrols {
+        margin-left: 88px;
+        margin-top: 650px;
+    }
+
+    /****** Resoft News ******/
+   
 }

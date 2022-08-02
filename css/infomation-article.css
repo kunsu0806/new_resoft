@@ -178,115 +178,137 @@ header h1 a img {
     color: black;
 }
 
-/************************** infomation **************************/
-#infomation {
-    max-width: 1440px;
-    height: 1738px;
-    margin: 0 auto;
+/***************************** article *******************************/
+.news {
+    margin-top:100px;
 }
 
-#infomation .title{
-    margin-top: 100px;
+.infomation-title {
+    margin-left: 240px;
     margin-bottom: 50px;
 }
 
-#infomation .title :nth-child(1){
-    font-weight: bold;
-    font-size: 40px;
-    line-height: 58px;
-    color: #1E1E1E;
+.news .left-button {
+    position:relative;
+    margin-left: 240px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:19px;
+	font-weight:bold;
 }
-#infomation .title :nth-child(2){
-    font-size: 18px;
-    line-height: 26px;
-    color: #C8C8C8;
-}
-
-#infomation .cont{
+.left-button a {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    grid-column-gap: 80px;
-    grid-row-gap: 50px;
-    margin-bottom: 100px;
-}
-
-#infomation a {
     text-decoration: none;
 }
-#infomation button {
-    border: 0;
-    background-color: transparent;
-}
-#infomation img{
-    width: 680px;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 1px solid #707070;
-    transition-duration: 0.5s;
+.left-button p {
+    margin-top: 8px;
+    margin-left: 20px;
+    font-size: 16px;
 }
 
-#infomation .img-box{
-    width: 680px;
-    height: 360px;
-    max-width: 680px;
-    max-height: 360px;
-    overflow: hidden;
-    border-radius: 20px;
-    border: 1px solid #707070;
-}
-
-#infomation .text-box :nth-child(1){
+.news .infomation-title .title-p{
+    text-align: left;
+    font-size:  40px;
     font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 1px;
-    line-height: 29px;
-    color: #1E1E1E;
+    width: 211px;
+    height: 58px;
 }
-#infomation .text-box :nth-child(2){
+
+.news .infomation-title .title-p2{
+    width: 51px;
+    height: 26px;
+    font-size: 18px;
+    color:#C8C8C8;
+}
+
+.news .news-container{
+    margin-left: 620px;
+    margin-top: -40px;
+}
+
+.news .news-title{
+    border-bottom: 2px solid #184B9F;
+    width:1060px;
+    padding-bottom: 30px;
+}
+
+.news .news-title p{
+    width: 1040px;
+    height: 35px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    color: #1E1E1E;
+    line-height: 0.8;
+}
+
+.news .news-title span{
+    width: 680px;
+    height: 24px;
+    text-align: left;
     font-size: 16px;
     letter-spacing: 0.8px;
-    line-height: 24px;
-    color: #C8C8C8;
+    color: #AAAAAA;
+    opacity: 1;
+}
+.news .news-imgbox{
+    margin-bottom: 50px;
+}
+.news .news-imgbox .news-img img{
+    margin-top:30px;
+    width: 1060px;
+    height: 561px;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    opacity: 1;
 }
 
-.add{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.button{
-    width: 200px;
-    height: 73px;
-    border: 1px solid #1E1E1E;
-    border-radius: 43px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.info-btn{
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    line-height: 29px;
-    color: #1E1E1E;
+.news .news-text {
+    width: 1041px;
+    text-align: left;
+    font-family:  Noto Sans KR sans-serif;
+    font-size:14px;
+    letter-spacing: 0.8px;
+    color: #000000;
+    opacity: 1;
+    border-bottom: 2px solid #184B9F;
+    padding-bottom: 30px;
 }
 
-#infomation a:hover img{
-    transform: scale(1.3);
-    filter: brightness(70%); 
-}
-#infomation a:hover .text-box :nth-child(1){
-    color: #184B9F;
+/* 이전글 다음글 버튼 */
+
+.news .text-button .bot-button,.bot-button2{
+    box-shadow: 0px 0px 0px 2px #9fb4f2;
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	background-color:#7892c2;
+	border-radius:11px;
+	border:2px solid #4e6096;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:14px;
+	font-weight:bold;
+	padding:12px 30px;
+	text-decoration:none;
+	text-shadow:0px 0px 0px #283966;
+    margin-top: 30px;
+    text-decoration: none;
+    margin-bottom: 200px;
 }
 
-.button:hover{
-    background-color: #184B9F;
+.news .text-button .bot-button2{
+    margin-left:780px;
 }
 
-.button:hover .info-btn{
-    color: #FFFFFF;
+.bot-button:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
+}
+.bot-button2:hover {
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	background-color:#476e9e;
 }
 
 /***************** footer ********************/

@@ -10,184 +10,360 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- underline-animation-->
-    <script src="./js/underline-animation1.js"></script>
+    <!-- Aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script>
+        window.onload = function(){
+            setDraggable(false)
+            setZoomable(false)
+        }
+    </script>
 </head>
 
 <body>
     <header>
         <div class="container" id="company">
             <h1>
-                <!-- Resoft Logo -->
+<!--------------------- Resoft Logo ----------------------->
                 <a href="main.html"><img src="./img/Header-Logo.svg"></a>
             </h1>
-                <!-- Nav Bar -->
-            <nav>
-                <ul id="nav-bar">
-                    <li class="btn-one">
-                        <a href="#company" class="one-cl">회사소개</a>
-                    </li>
-                    <li class="btn-two">
-                        <a href="business.html" class="two-cl">사업현황</a>
-                    </li>
-                    <li class="btn-three">
-                        <a href="information.html" class="three-cl">정보마당</a>
-                    </li>
-                    <li class="bottom-line"></li>
+<!----------------------- Nav Bar ------------------------->
+            <ul>
+                <li class="nav">
+                    <a href="company.html" class="nav-item is-active" active-color="blue">회사소개</a>
+                    <a href="business.html" class="nav-item" active-color="blue">사업현황</a>
+                    <a href="information.html" class="nav-item" active-color="blue">정보마당</a>
+                    <span class="nav-indicator"></span>
+                </li>
+                <script src="./js/header5.js"></script>
 
-                <!-- Hamberger Button -->
-                    <li class="btn">
-                        <button type="button" onclick="doDisplay()"><i class="fa-solid fa-bars" style="color:black"></i></button>
-                    </li>
-                </ul>
-            </nav>
-                
+<!--------------------- Hamberger Button ---------------------->
+                <li class="btn">
+                    <button type="button" onclick="doDisplay()"><i class="fa-solid fa-bars" style="color:black"></i></button>
+                </li>
+            </ul>     
         </div>
-
-        <!-- company header -->
+<!------------------------- company header ------------------------->
         <div id="company-header">
             <h1>회사소개</h1>
         </div>
-
-        <!-- Hamberger Navbar -->
+<!------------------------- Hamberger Navbar --------------------------->
         <div id="myNav" class="overlay">
             <div class="overlay-content">
-                <a href="#">REsoft소개</a>
-                <a href="#">연혁</a>
-                <a href="#">조직도</a>
-                <a href="#">특허&인증</a>
-                <a href="#">오시는 길</a>
+                <a href="company.html#introduce-resoft">REsoft소개</a>
+                <a href="company.html#history">연혁</a>
+                <a href="company.html#Organization-chart">조직도</a>
+                <a href="company.html#certification">특허&인증</a>
+                <a href="company.html#directions">오시는 길</a>
             </div>
             <div class="overlay-content">
-                <a href="#">ECOCE</a>
-                <a href="#">moaDo</a>
-                <a href="#">Etc</a>
-              </div>
-              <div class="overlay-content">
-                <a href="#">REsoft소식</a>
-              </div>
+                <a href="business.html#ecoce">ECOCE</a>
+                <a href="business.html#moado">moaDo</a>
+                <a href="business.html#remainder">Etc</a>
+            </div>
+            <div class="overlay-content">
+                <a href="information.html#information">REsoft소식</a>
+            </div>
         </div>
-
-        <!-- Hamberger Script -->
-        <script> 
-            var bDisplay = true; 
-            function doDisplay(){ 	
-                var con = document.getElementById("myNav"); 	
-                if(con.style.display=='none'){ 		
-                    con.style.display = 'block'; 	
+<!--------------------------- Hamberger Script ----------------------------->
+        <script>
+            function doDisplay(){
+                var con = document.getElementById("myNav");
+                if(con.style.display == 'block'){ 		
+                    con.style.display = 'none';
                 }else{ 		
-                    con.style.display = 'none'; 	
-                } 
-            } 
+                    con.style.display = 'block'; 	
+                }
+            }
         </script>
     </header>
 
-    <!--------------------------------------------  Resoft 소개   --------------------------------------------->
-    <div id="introduce-resoft">
-        <div>
-            <div class="introduce-title">
-                <p class="title-m">REsoft 소개</p>
-                <p class="title-sub">ABOUT US</p>
-            </div>
+<!--------------------------------------------  Resoft 소개   --------------------------------------------->
+    <section id="introduce-resoft">
+        <div class="introduce-title">
+            <p class="title-m">REsoft 소개</p>
+            <p class="title-sub">ABOUT US</p>
         </div>
-        <div>
-            <table class="info-container">
-                <tbody>
-                    <tr class="info-box">
-                        <td class="info-p"><p>회사명</p></td>
-                        <td class="info-p2" ><p>(주)리소프트</p></td>
-                    </tr>
-                    
-                    <tr class="info-box">
-                        <td class="info-p"><p>설립일</p></td>
-                        <td class="info-p2"><p>2021년 5월 6일</p></td>
-                    </tr>
+        <table class="info-container">
+            <tbody>
+                <tr class="info-box">
+                    <td class="info-p"><p>회사명</p></td>
+                    <td class="info-p2" ><p>(주)리소프트</p></td>
+                </tr>
+            
+                <tr class="info-box">
+                    <td class="info-p"><p>설립일</p></td>
+                    <td class="info-p2"><p>2021년 5월 6일</p></td>
+                </tr>
 
-                    <tr class="info-box">
-                        <td class="info-p"><p>대표이사</p></td>
-                        <td class="info-p2"><p>오유나</p></td>
-                    </tr>
+                <tr class="info-box">
+                    <td class="info-p"><p>대표이사</p></td>
+                    <td class="info-p2"><p>오유나</p></td>
+                </tr>
 
-                    <tr class="info-box">
-                        <td class="info-p"><p>주요 사업</p></td>
-                        <td class="info-p2"><p>모바일 플랫폼 개발</p></td>
-                    </tr>
+                <tr class="info-box">
+                    <td class="info-p"><p>주요 사업</p></td>
+                    <td class="info-p2"><p>모바일 플랫폼 개발</p></td>
+                </tr>
 
-                    <tr class="info-box">
-                        <td class="info-p"><p>본사</p></td>
-                        <td class="info-p2"><p>대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호</p></td>
-                    </tr>
+                <tr class="info-box">
+                    <td class="info-p"><p>본사</p></td>
+                    <td class="info-p2"><p>대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호</p></td>
+                </tr>
 
-                    <tr class="info-box">
-                        <td class="info-p">
-                            <p>부설연구소</p>
-                        </td>
-                        <td class="info-p2">
-                            <p>대구광역시 수성구 알파시티1로 160, SW융합테크비즈센터(Dnex) 305호</p>
-                        </td>
-                    </tr>
+                <tr class="info-box">
+                    <td class="info-p">
+                        <p>부설연구소</p>
+                    </td>
+                    <td class="info-p2">
+                        <p>대구광역시 수성구 알파시티1로 160, SW융합테크비즈센터(Dnex) 305호</p>
+                    </td>
+                </tr>
 
-                    <tr class="info-box">
-                        <td class="info-p">
-                            <p>연락처</p>
-                        </td>
-                        <td class="info-p2">
-                            <p>TEL. (053) 475-2110 / FAX. (0504) 257-5966 / E-mail. call@resoft.kr</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-
+                <tr class="info-box">
+                    <td class="info-p">
+                        <p>연락처</p>
+                    </td>
+                    <td class="info-p2">
+                        <p>TEL. (053) 475-2110 / FAX. (0504) 257-5966 / E-mail. call@resoft.kr</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 <!--------------------- 연혁 --------------------------->
     <section id="history">
         <div class="history-title">
             <p>연혁</p>
             <span>history</span>
         </div>
-        <div class="history-desc">
+        <ul class="history-ul">
+            <li class="ul-line">
+                <h1>2022</h1>
+                <h4>1</h4>
+                <p>&nbsp;</p>
+            </li>
+            <li>
+                <h1>2021</h1>
+                <h4 class="history-point">12</h4>
+                <p>대구여성인력개발센터 MOU 협약 (여성IT인재 현장실습)</p>
+                <p>대구가톨릭대학교 계약학과 MOU 협약 (ICTAI융합학과)</p>
+                <p>기업부설연구소(연구개발전담부서) 등록</p>
+            </li>
+            <li>
+                <h4>11</h4>
+                <p>제 38류, 제 45류 상표등록 출원 (Mmate : 제 40-1799224호, 제 40-1799225호)</p>
+            </li>
+            <li>
+                <h4>10</h4>
+                <p>서울특별시 송파구청 앱 개발 (제8회 한성백제마라톤 비대면 대회)</p>
+                <p>대구광역시체육회 앱 개발 (2021 대구 마스크쓰햬 컬러풀 핫플 걷기)</p>
+                <p>대구광역시 달서구체육회 앱 개발 (제15회 언택트 달서 하프마라톤 대회)</p>
+            </li>
+            <li>
+                <h4>9</h4>
+                <p>대구 경북지방중소벤처기업청 여성기업 등록</p>
+            </li>
+            <li>
+                <h4>8</h4>
+                <p>구미대학교 MOU 협약 (현장실습학기제)</p>
+            </li>
+            <li>
+                <h4>5</h4>
+                <p>(주)리소프트 회사 설립</p>
+            </li>
+        </ul>
+    </section>
+<!------------------------- Organization chart ------------------------------->
+    <section id="Organization-chart"
+        data-aos="zoom-in" 
+        data-aos-offset="200" 
+        data-aos-easing="ease-out-sine"
+        data-aos-duration="1000">
+        <div class="Organization-title">
+            <p>조직도</p>
+            <span>ORGANIZATION</span>
+        </div>
+        <div class="org-tree">
+            <h1 class="level-1 CEO">대표이사</h1>
+            <ol class="level-2-wrapper">
+                <li>
+                    <h2 class="level-2 department1">전략기획부</h2>
+                    <div class="level-3-desc">
+                        • 유저 Needs 분석<br>
+                        • 고객 수요 확인<br>
+                        • BM 설계/기획<br>
+                        • 사업화 전략 수립<br>
+                        • 사업계획서 작성
+                    </div>
+                </li>
+                <li>
+                    <h2 class="level-2 department2">개발부</h2>
+                    <div class="level-3-desc">
+                        • 유저 Needs 분석<br>
+                        • 고객 수요 확인<br>
+                        • BM 설계/기획<br>
+                        • 사업화 전략 수립<br>
+                        • 사업계획서 작성
+                    </div>
+                </li>
+                <li>
+                    <h2 class="level-2 department3">디자인부</h2>
+                    <div class="level-3-desc">
+                        • 유저 Needs 분석<br>
+                        • 고객 수요 확인<br>
+                        • BM 설계/기획<br>
+                        • 사업화 전략 수립<br>
+                        • 사업계획서 작성
+                    </div>
+                </li>
+                <li>
+                    <h2 class="level-2 department4">마케팅부</h2>
+                    <div class="level-3-desc">
+                        • 유저 Needs 분석<br>
+                        • 고객 수요 확인<br>
+                        • BM 설계/기획<br>
+                        • 사업화 전략 수립<br>
+                        • 사업계획서 작성
+                    </div>
+                </li>
+                <li>
+                    <h2 class="level-2 department5">경영지원부</h2>
+                    <div class="level-3-desc">
+                        • 유저 Needs 분석<br>
+                        • 고객 수요 확인<br>
+                        • BM 설계/기획<br>
+                        • 사업화 전략 수립<br>
+                        • 사업계획서 작성
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <script> 
+            AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+        </script>
+    </section>
+<!------------------------특허 인증 --------------------->
+    <div id="certification">
+        <div class="cert_text">
+            <p class="cert_p1">특허 & 인증</p>
+            <span>CERTIFICATION & PATENT</span>
+        </div>
+        
+        <div class="cert_container">
+            <ul class="cert_ul">
+                <li class="cert_li">
+                    <div class="cert_image_box">
+                        <img src="./img/book.webp" class="cert_img">                
+                    </div>
+                </li>
+                <li class="cert_li">
+                    <div class="cert_image_box">
+                        <img src="./img/certificate.png" class="cert_img">                
+                    </div>
+                </li>
+                <li class="cert_li">
+                    <div class="cert_image_box">
+                        <img src="./img/book.webp" class="cert_img">                
+                    </div>
+                </li>
+                <li class="cert_li">
+                    <div class="cert_image_box">
+                        <img src="./img/book.webp" class="cert_img">                
+                    </div>
+                </li>
+                <li class="cert_li">
+                    <div class="cert_image_box">
+                        <img src="./img/book.webp" class="cert_img">                
+                    </div>
+                </li>
+                <li class="cert_li">
+                    <div class="cert_image_box">
+                        <img src="./img/book.webp" class="cert_img">                
+                    </div>
+                </li>
+                <li class="cert_li">
+                    <div class="cert_image_box">
+                        <img src="./img/book.webp" class="cert_img">                
+                    </div>
+                </li>
+                <li class="cert_li">
+                    <div class="cert_image_box">
+                        <img src="./img/book.webp" class="cert_img">                
+                    </div>
+                </li>
+                <li class="cert_li">
+                    <div class="cert_image_box">
+                        <img src="./img/book.webp" class="cert_img">                
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!------------------------------------ Map -------------------------------------->
+    <div id="directions">
+        <div class="direction-title">
+            <p>오시는 길</p>
+            <span>DIRECTIONS</span>
+        </div>
+        <div class="cont">
             <div>
-                <p>2022</p>
-                <ol>1</ol>
+                <div id="map" class="kakaomap" style="width:1440px;height:680px;"></div>
+                <script type="text/javascript"
+                    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=78f4f36bf8cec7a4fe3231201a6f8b56"></script>
+                <script>
+                    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+                        mapOption = {
+                            center: new kakao.maps.LatLng(35.87172918917555, 128.62486866975289), // 지도의 중심좌표
+                            level: 2 // 지도의 확대 레벨
+                        };
+                    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+                    var map = new kakao.maps.Map(mapContainer, mapOption);
+                    var imageSrc = './img/map_marker.png', // 마커이미지의 주소입니다
+                        imageSize = new kakao.maps.Size(220, 45), // 마커이미지의 크기입니다
+                        imageOption = { offset: new kakao.maps.Point(27, 69) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+                    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+                    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+                        markerPosition = new kakao.maps.LatLng(35.87172918917555, 128.62486866975289); // 마커가 표시될 위치입니다
+                    // 마커를 생성합니다
+                    var marker = new kakao.maps.Marker({
+                        position: markerPosition,
+                        image: markerImage // 마커이미지 설정
+                    });
+                    // 마커가 지도 위에 표시되도록 설정합니다
+                    marker.setMap(map);
+                    // 버튼 클릭에 따라 지도 이동 기능을 막거나 풀고 싶은 경우에는 map.setDraggable 함수를 사용합니다
+                    function setDraggable(draggable) {
+                        // 마우스 드래그로 지도 이동 가능여부를 설정합니다
+                        map.setDraggable(draggable);
+                    }
+                    // 버튼 클릭에 따라 지도 확대, 축소 기능을 막거나 풀고 싶은 경우에는 map.setZoomable 함수를 사용합니다
+                    function setZoomable(zoomable) {
+                        // 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
+                        map.setZoomable(zoomable);
+                    }
+                </script>
             </div>
-            <div>
-                <p>2021</p>
-                <ol>12
-                    <li>대구여성인력개발센터 MOU 협약(여성IT인재 현장실습)</li>
-                    <li>대구가톨릭대학교 계약학과 MOU 협약 (ICTAI융합학과)</li>
-                    <li>기업부설연구소(연구개발전담부서) 등록</li>
-                </ol>
-                <ol>11
-                    <li>제 38류, 제 45류 상표등록 출원 (Mmate : 제 40-1799224호, 제 40-1799225호)</li>
-                </ol>
-                <ol>10
-                    <li>서울특별시 송파구청 앱 개발 (제8회 한성백제마라톤 비대면 대회)</li>
-                    <li>대구광역시체육회 앱 개발 (2021 대구 마스크쓰햬 컬러풀 핫플 걷기)</li>
-                    <li>대구광역시 달서구체육회 앱 개발 (제15회 언택트 달서 하프마라톤 대회)</li>
-                </ol>
-                <ol>9
-                    <li>대구 경북지방중소벤처기업청 여성기업 등록</li>
-                </ol>
-                <ol>8
-                    <li>구미대학교 MOU 협약 (현장실습학기제)</li>
-                </ol>
-                <ol>5
-                    <li>(주)리소프트 회사 설립</li>
-                </ol>
+            <div class="info">
+                <div class="tel">
+                    <div class="one"><p>연락처</p></div>
+                    <div class="two"><p>TELL. (053) 475-2110 FAX. (0504) 257-5966 E-MAIL. call@resoft.kr</p></div>
+                </div>
+                <div class="line"></div>
+                <div class="add">
+                    <div class="one"><p>주소</p></div>
+                    <div class="two"><p>(41260) 대구광역시 동구 동대구로 465, 대구스케일업허브(DASH) 713호 (주)리소프트</p></div>
+                </div>
             </div>
         </div>
-    </section>
-
-
-    <!------------------------- footer ------------------------------->
+    </div>
+<!------------------------- footer ------------------------------->
     <footer id="footer">
         <div class="footer-wrap">
             <div class="footer-logo">
                 <img src="./img/resoft.png" alt="">
             </div>
-
             <div class="address">
                 <p class="footer-add">© RESOFT CO.LTD. All Rights Reserved.</p>  
                 <p class="footer-inform">
@@ -208,6 +384,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>

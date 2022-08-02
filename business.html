@@ -10,82 +10,157 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- underline-animation-->
-    <script src="./js/underline-animation2.js"></script>
+
 </head>
 
 <body>
     <header>
         <div class="container" id="business">
             <h1>
-                <!-- Resoft Logo -->
+<!--------------------- Resoft Logo ----------------------->
                 <a href="main.html"><img src="./img/Header-Logo.svg"></a>
             </h1>
-                <!-- Nav Bar -->
-            <nav>
-                <ul id="nav-bar">
-                    <li class="btn-one">
-                        <a href="company.html" class="one-cl">회사소개</a>
-                    </li>
-                    <li class="btn-two">
-                        <a href="#business" class="two-cl">사업현황</a>
-                    </li>
-                    <li class="btn-three">
-                        <a href="information.html" class="three-cl">정보마당</a>
-                    </li>
-                    <li class="bottom-line"></li>
+<!----------------------- Nav Bar ------------------------->
+            <ul>
+                <li class="nav">
+                    <a href="company.html" class="nav-item" active-color="blue">회사소개</a>
+                    <a href="business.html" class="nav-item is-active" active-color="blue">사업현황</a>
+                    <a href="information.html" class="nav-item" active-color="blue">정보마당</a>
+                    <span class="nav-indicator"></span>
+                </li>
+                <script src="./js/header5.js"></script>
 
-                <!-- Hamberger Button -->
-                    <li class="btn">
-                        <button type="button" onclick="doDisplay()"><i class="fa-solid fa-bars" style="color:black"></i></button>
-                    </li>
-                </ul>
-            </nav>
-                
+<!--------------------- Hamberger Button ---------------------->
+                <li class="btn">
+                    <button type="button" onclick="doDisplay()"><i class="fa-solid fa-bars" style="color:black"></i></button>
+                </li>
+            </ul>
         </div>
-
-        <!-- business header -->
+<!------------------------- business header ------------------------->
         <div id="business-header">
             <h1>사업현황</h1>
         </div>
-
-
-
-
-                <!-- Hamberger Navbar -->
+<!------------------------- Hamberger Navbar --------------------------->
         <div id="myNav" class="overlay">
             <div class="overlay-content">
-                <a href="#">REsoft소개</a>
-                <a href="#">연혁</a>
-                <a href="#">조직도</a>
-                <a href="#">특허&인증</a>
-                <a href="#">오시는 길</a>
+                <a href="company.html#introduce-resoft">REsoft소개</a>
+                <a href="company.html#history">연혁</a>
+                <a href="company.html#Organization-chart">조직도</a>
+                <a href="company.html#certification">특허&인증</a>
+                <a href="company.html#directions">오시는 길</a>
             </div>
             <div class="overlay-content">
-                <a href="#">ECOCE</a>
-                <a href="#">moaDo</a>
-                <a href="#">Etc</a>
-              </div>
-              <div class="overlay-content">
-                <a href="#">REsoft소식</a>
-              </div>
+                <a href="business.html#ecoce">ECOCE</a>
+                <a href="business.html#moado">moaDo</a>
+                <a href="business.html#remainder">Etc</a>
+            </div>
+            <div class="overlay-content">
+                <a href="information.html#information">REsoft소식</a>
+            </div>
         </div>
-
-        <!-- Hamberger Script -->
-        <script> 
-            var bDisplay = true; 
-            function doDisplay(){ 	
-                var con = document.getElementById("myNav"); 	
-                if(con.style.display=='none'){ 		
-                    con.style.display = 'block'; 	
+<!--------------------------- Hamberger Script ----------------------------->
+        <script>
+            function doDisplay(){
+                var con = document.getElementById("myNav");
+                if(con.style.display == 'block'){ 		
+                    con.style.display = 'none';
                 }else{ 		
-                    con.style.display = 'none'; 	
-                } 
-            } 
+                    con.style.display = 'block'; 	
+                }
+            }
         </script>
     </header>
-
-    <!------------------------- footer ------------------------------->
+<!------------------------------- ecoce ----------------------------------->
+    <section id="ecoce">
+        <div class="ecose_7">
+            <h2 class="title_1">에코스</h2>
+            <p class="title_2">ECO-Clean Earth</p>
+            <div class="ecoce-imga">
+                <img src="./img/ecosfront.png" alt="">
+            </div>
+            <div class="ecoce-right">
+                <p class="ex_text">국내 최초<br>탄소중립 실천인증 플랫폼</p>
+                <img src="./img/ecos.png" alt="">
+                <p class="logo_2">ECO-Clean Earth</p>
+                <ul class="ecoce-app">
+                    <li>
+                        <a href="">
+                            <img src="./img/playstore.png" alt="">
+                            <p>Play Store에서 다운로드</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="./img/apple.png" alt="">
+                            <p>App Store에서 다운로드</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </section>
+<!----------------------------------- moado ------------------------------------>        
+    <section id = "moado">
+        <div class="bkg-left">
+            <div class="bkg-right">
+                <div class="moado_title">
+                    <h1>모아두</h1>
+                    <p>moado</p>
+                </div>
+                <div class = "wrapper">
+                    <div class = "moado_left">
+                        <img src="./img/moado2.png">
+                    </div>
+                    <div class = "moado_right">
+                        <p>내 손안의 모바일 회원수첩</p>
+                        <img src="./img/pass649.png">
+                        <button type="button"  style="cursor:pointer;">사이트 바로가기</button>
+                    </div>
+                    <div class = "moado_middle">
+                        <img src="./img/mainmoado.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-------------------------------- remainder ------------------------------------>
+    <div id="remainder">
+        <div class="remainder-text">
+            <p>Etc</p>
+            <span>PROJECTS</span>
+        </div>
+        
+        <div class="remainder-container">
+            <ul class="remainder-ul">
+                <li class="remainder-li">
+                    <div class="remainder-image-box">
+                        <img src="./img/mask-go.png" class="remainder-img">                
+                    </div>
+                </li>
+                <li class="remainder-li">
+                    <div class="remainder-image-box">
+                        <img src="./img/urology.png" class="remainder-img">                
+                    </div>
+                </li>
+                <li class="remainder-li">
+                    <div class="remainder-image-box">
+                        <img src="./img/maroton-mobile.png" class="remainder-img">                
+                    </div>
+                </li>
+                <li class="remainder-li">
+                    <div class="remainder-image-box">
+                        <img src="./img/solab.png" class="remainder-img">                
+                    </div>
+                </li>
+                <li class="remainder-li">
+                    <div class="remainder-image-box">
+                        <img src="./img/kibwa-mobile.png" class="remainder-img">                
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!------------------------- footer ------------------------------->
     <footer id="footer">
         <div class="footer-wrap">
             <div class="footer-logo">
@@ -112,7 +187,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>
 

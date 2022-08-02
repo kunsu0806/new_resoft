@@ -1,17 +1,33 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap');
 
+/******************************** codrops slider component*******************************/
+@font-face {
+	font-family: 'entypo';
+	src:url('../fonts/controls/entypo.eot');
+	src:url('../fonts/controls/entypo.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/controls/entypo.woff') format('woff'),
+		url('../fonts/controls/entypo.ttf') format('truetype'),
+		url('../fonts/controls/entypo.svg#entypo') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    border: 0;
+    font-size: 100%;
     font-family: 'Noto Sans', sans-serif;
     box-sizing: border-box;
     vertical-align: baseline;
 }
 
 body {
-    max-width: 1920px;
-    margin: 0 auto;
+    width: 1920px;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 li {
     list-style: none;
@@ -19,105 +35,174 @@ li {
 
 
 /********************************* 헤더부분 *************************************/
-header {
+#header {
     width: 100%;
     height: 900px;
-    background: url("./img/Head-back-img.png") no-repeat center center/cover, rgba(0, 0, 0, 0.5);
-    background-blend-mode: multiply;
-    position: fixed;
     z-index: 1000;
     top:0;
+    position: relative;
 }
 
-header .container{
-    display: flex;
-    justify-content: space-between; /* 양 끝으로 배치 */
-    align-items: center;
-    width: 100%;
-    border: 1px solid #ffff;
-    height: 80px;
+.header-logo {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    z-index: 1;
+    margin-left: 20px;
+    height: 30px;
 }
 
-header nav ul{
-    display: flex; /* 메뉴 가로 배치 */
-}
-
-header nav ul li{
-    padding: 2rem;
-}
-
-header button{
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    color: white;
-}
-
-/* 로고 */
-header h1 button{ 
-    font-weight: bold;
-    color: white;
-    margin-left: 360px;
-}
-header h1 button img {
+.header-logo img {
+    position: absolute;
     width: 133px;
     height: 30px;
 }
 
-/* 메뉴 */
-header nav ul li button {
-    font-size: 20px;
-}
-header nav ul li.btn button {
-    margin-right: 220px;
-    margin-left: 30px;
-    font-size: 32px;
-}
-
-
-.text-box {
-    position: relative;
-    height: 100%;
-}
-
-.hd-1 {
+.header-nav {
     position: absolute;
-    top: 400px;
-    left: 240px;
-    color: #ffff;
-    letter-spacing: 0;
-    text-align: left;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid white;
+    z-index: 1;
 }
 
-.hd-1 p.main-text {
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 140%;
-    margin-bottom: 50px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/******************************* codrops slider ************************************/
+
+.cbp-bislideshow {
+	list-style: none;
+	width: 100%;
+    position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	padding: 0;
+	margin: 0;
 }
 
-.hd-1 p.sub-text {
-    word-break: normal;
-    font-size: 18px;
-    width: 60%;
+.cbp-bislideshow li {
+	position: absolute;
+	width: 100%;
+	height: 900px;
+	opacity: 0;
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	transition: opacity 1s;
+    filter: brightness(30%);
 }
 
-.hd-1 img {
-    margin-top: 80px;
-    opacity: 0.5;
+.backgroundsize .cbp-bislideshow li {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-position: center center;
 }
-.hd-1 img.left{
-    width: 60px;
-    height: 40px;
+
+/************************** hide the images ***************************/
+.backgroundsize .cbp-bislideshow li img {
+	display: none;
 }
-.hd-1 img.center{
-    width: 15px;
-    height: 21px;
-    margin-bottom: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
+
+.cbp-bislideshow li img {
+	display: block;
+	width: 100%;
 }
-.hd-1 img.right{
-    width: 60px;
-    height: 40px;
+
+/*************************** slider controls ************************/
+.cbp-bicontrols {
+	position: inherit;
+	width: 300px;
+	height: 100px;
+    margin-top: 650px;
+    margin-left: 200px;
+}
+
+.cbp-bicontrols span {
+	float: left;
+	width: 100px;
+	height: 100px;
+	position: relative;
+	cursor: pointer;
+}
+
+.cbp-bicontrols span:before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+	font-family: 'entypo';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 100px;
+	font-size: 40px;
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+	opacity: 0.7;
+}
+
+.cbp-bicontrols span:hover:before {
+	opacity: 1;
+}
+
+.cbp-bicontrols span:active:before {
+	top: 2px;
+}
+
+span.cbp-biplay:before {
+	content: "\e002";
+}
+
+span.cbp-bipause:before {
+	content: "\e003";
+}
+
+span.cbp-binext:before {
+	content: "\e000";
+}
+
+span.cbp-biprev:before {
+	content: "\e001";
+}
+
+.cbp-bicontrols span.cbp-binext {
+	float: right;
+}
+
+/* Fallback */
+
+.no-js.no-backgroundsize .cbp-bislideshow li:first-child {
+	opacity: 1;
+}
+
+.no-js.backgroundsize .cbp-bislideshow li:first-child img {
+	display: block;
 }
