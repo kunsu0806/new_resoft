@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,18 +15,24 @@
 </head>
 
 <body>
+<!-------------------------------------------------------------- top button ----------------------------------------------------------------->
+    <div class="topBtn">
+        <a href="#" class="topBtn-a"><i class="fa-solid fa-circle-chevron-up"></i></a>
+    </div>
+    <script src="./js/topBtn.js"></script>
+
     <header>
         <div class="container" id="business">
             <h1>
 <!--------------------- Resoft Logo ----------------------->
-                <a href="index.html"><img src="./img/Header-Logo.svg"></a>
+                <a href="main.html"><img src="./img/Header-Logo.svg"></a>
             </h1>
 <!----------------------- Nav Bar ------------------------->
             <ul>
                 <li class="nav">
-                    <a href="company.html" class="nav-item" active-color="blue">회사소개</a>
-                    <a href="business.html" class="nav-item is-active" active-color="blue">사업현황</a>
-                    <a href="information.html" class="nav-item" active-color="blue">정보마당</a>
+                    <a href="company.html" class="nav-item" active-color="#78EAFF">회사소개</a>
+                    <a href="business.html" class="nav-item is-active" active-color="#78EAFF">사업현황</a>
+                    <a href="information.html" class="nav-item" active-color="#78EAFF">정보마당</a>
                     <span class="nav-indicator"></span>
                 </li>
                 <script src="./js/header5.js"></script>
@@ -43,6 +50,8 @@
 <!------------------------- Hamberger Navbar --------------------------->
         <div id="myNav" class="overlay">
             <div class="overlay-content">
+                <a class="mobile" href="company.html">회사소개</a>
+                <a class="m-line"href=""></a>
                 <a href="company.html#introduce-resoft">REsoft소개</a>
                 <a href="company.html#history">연혁</a>
                 <a href="company.html#Organization-chart">조직도</a>
@@ -50,11 +59,13 @@
                 <a href="company.html#directions">오시는 길</a>
             </div>
             <div class="overlay-content">
+                <a class="mobile" href="business.html">사업현황</a>
                 <a href="business.html#ecoce">ECOCE</a>
                 <a href="business.html#moado">moaDo</a>
                 <a href="business.html#remainder">Etc</a>
             </div>
             <div class="overlay-content">
+                <a class="mobile" href="information.html">정보마당</a>
                 <a href="information.html#information">REsoft소식</a>
             </div>
         </div>

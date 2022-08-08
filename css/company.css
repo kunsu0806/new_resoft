@@ -12,13 +12,32 @@
 body {
     max-width: 1920px;
     margin: 0 auto;
-    overflow-x: hidden;
-    overflow-y: auto;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
 }
 li {
     list-style: none;
 }
 
+/****************************** TOP button ********************************/
+.topBtn{
+    position: fixed;
+    z-index: 999;
+    bottom: 7%;
+    right: 5%;
+    align-items: center;
+    display: none;
+}
+.topBtn .topBtn-a{
+    cursor: pointer;
+}
+.topBtn i{
+    font-size: 50px;
+    color: #184B9F;
+}
 
 /********************************* 헤더부분 *************************************/
 header {
@@ -53,7 +72,7 @@ header ul li {
     overflow: hidden;
     max-width: 100%;
     padding: 0 20px;
-    top: -6px;
+    top: -5px;
 }
 .nav-item {
     color: black;
@@ -105,9 +124,8 @@ header button {
     background: transparent;
     border: 0;
     cursor: pointer;
-    font-weight: bold;
     font-size: 32px;
-    margin-top: 25px;
+    margin-top: 17px;
 }
 
 /************************************* 로고 ****************************************/
@@ -162,6 +180,13 @@ header h1 a img {
 }
 .overlay-content:last-child {
     margin-left: 15px;
+}
+
+.overlay .mobile {
+    display: none;
+}
+.overlay .m-line {
+    display: none;
 }
 
 .overlay a {
@@ -320,8 +345,8 @@ header h1 a img {
 
 .history-ul li p {
     padding-left: 35%;
-    line-height: 65px;
-    margin-top: -15px;
+    line-height: 80px;
+    margin-top: -30px;
     font-size: 20px;
 }
 
@@ -329,6 +354,9 @@ header h1 a img {
 /************** 2021 위치 조정 *************/
 .history-point {
     margin-top: 50px;
+}
+.mobile-h-p {
+    display: none;
 }
 
 /********************* Organization-chart *******************/
@@ -593,6 +621,7 @@ header h1 a img {
     max-width: 1440px;
     height: 1344px;
     margin-left: 240px;
+    margin-bottom: 200px;
 }
 
 .direction-title p {
@@ -608,6 +637,11 @@ header h1 a img {
 
 .direction-title {
     margin-bottom: 50px;
+}
+
+#map {
+    width: 1440px;
+    height: 910px;
 }
 
 #directions .cont .info .tel,
@@ -633,7 +667,6 @@ header h1 a img {
 #directions .cont .info .tel .two,
 #directions .cont .info .add .two{
     width: 1080px;
-
     font-size: 20px;
     line-height: 30px;
     color: #959595;
@@ -690,4 +723,433 @@ header h1 a img {
     bottom: 50px;
     height: 50px;
     margin-top: -25px;
+}
+
+/************** media query 1. Header tablet ****************/
+@media (min-width: 769px) and (max-width: 1280px) {
+    /******* header *******/
+    header h1 a {    
+        margin-left: 231.07px;
+    }
+    header ul {
+        left: -500px;
+    }
+    header .nav {
+        letter-spacing: -2;
+    }
+    #company-header {
+        width: 1280px;
+        height: 300px;
+    }
+    #company-header h1 {
+        font-size: 40px;
+    }
+    .overlay-content:first-child {
+        margin-left: 655px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: -16px;
+    }
+    .overlay-content:last-child {
+        margin-left: 14px;
+    }
+    
+    .overlay .mobile {
+        display: none;
+    }
+    .overlay .m-line {
+        display: none;
+    }
+
+/************** media query 2. Intoroduce tablet ****************/
+    .introduce-title {
+        margin-left: 140px;
+    }
+    .info-container {
+        margin-left: 140px;
+        width: 1000px;
+    }
+/************** media query 3. History tablet ****************/
+    .history-title p {
+        margin-left: 140px;
+    }
+    .history-title span {
+        margin-left: 155px;
+    }
+    .history-ul {
+        margin-left: 140px;
+    }
+    .history-ul li p {
+        letter-spacing: -1;
+        line-height: 4;
+    }
+    .mobile-h-p {
+        display: none;
+    }
+/************** media query 4. Organization tablet ****************/
+    #Organization-chart {
+        height: 1500px;
+        margin-bottom: 100px;
+    }
+    .Organization-title p {
+        margin-left: 140px;
+    }
+    .Organization-title span {
+        margin-left: 140px;
+    }
+    .Org-tree {
+        width: 500px;
+        height: 1156px;
+        margin-left: 390px;
+    }
+    .level-2-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0px;
+    }
+    /***** LEVEL-1 중앙 세로선 *****/
+    .level-1::before {
+        height: 70px;
+    }
+    /***** LEVEL-2 가로선 & 위치 *****/
+    .level-2-wrapper::before {
+        left: 20%;
+        width: 300px;
+    }
+    .level-2-wrapper li {
+        margin-right: 100px;
+    }
+    .level-2-wrapper > li.tab-345::before {
+        height: 0;
+    }
+    .Org-tree .department3,
+    .Org-tree .department4,
+    .Org-tree .department5
+     {
+        margin-top: -100px;
+    }
+    .level-3-desc {
+        margin-left: 0px;
+        font-size: 20px;
+        line-height: 1.8;
+        font-weight: bold;
+    }
+
+/************** media query 5. CERTIFICATION & PATENT tablet ****************/
+    #certification .cert_text .cert_p1 {
+        margin-left: 140px;
+    }
+
+    #certification .cert_text span{
+        margin-left: 140px;
+    }
+    .cert_container{
+        margin-left: 140px;
+    }
+/************** media query 6. DIRECTIONS tablet ****************/
+    #directions {
+        margin-bottom: 0px;
+    }
+    .direction-title {
+        margin-left: -100px;
+    }
+    #map {
+        width: 1000px;
+        height: 680px;
+        margin-left: -100px;
+    }
+    #directions .cont .info {
+       width: 1000px;
+       margin-left: -100px;
+    }
+    #directions .cont .info .line {
+        width: 1000px;
+    }
+    #directions .cont .info .tel {
+        margin-left: -200px;
+    }
+    #directions .cont .info .add {
+        margin-left: -210px;
+    }
+    
+/************** media query 4. footer tablet ****************/
+    .footer-wrap {
+        width: 1280px;
+    }
+    #footer .footer-logo {
+        margin-left: -157px;
+        width: 100%
+    }
+    .footer-wrap .address .footer-add {
+        margin-left: -157px;
+        font-size: 18px;
+    }
+    .footer-wrap .address .footer-inform {
+        margin-left: 83px;
+        text-rendering: optimizeSpeed;
+        letter-spacing: -1px;
+    }
+    .footer-wrap .address .footer-inform-add {
+        margin-left: -291px;
+        text-rendering: optimizeSpeed;
+        letter-spacing: -1px;
+    }
+}
+
+/***************************************** media query mobile ***************************************/
+@media (max-width: 768px) {
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        width: 100%;
+    }
+    body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+/************** media query 1.header mobile ****************/
+    header {
+        width: 768px;
+    }
+    header h1 a {    
+        margin-left: 52px;
+    }
+    header .nav a {
+        display: none;
+    }
+    header ul {
+        left: 458px;
+    }
+    .overlay {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .overlay::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    .overlay .mobile {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .overlay .m-line {
+        display: block;
+        padding: 0;
+        border-bottom: 1px solid #9E9E9E;
+        width: 768px;
+        margin-left: -275px;
+    }
+    .overlay-content {
+        letter-spacing: 0;
+    }
+    .overlay-content:first-child {
+        margin-left: 275px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: 420px;
+        margin-top: -190px;
+    }
+    .overlay-content:last-child {
+        margin-left: 560px;
+        margin-top: -190px;
+    }
+    #company-header {
+        background: url(../img/mobile-company.png) no-repeat center;
+    }
+
+/************** media query 2.introduce mobile ****************/
+    .introduce-title .title-m {
+        margin-left: 60px;
+    }
+    .introduce-title .title-sub {
+        margin-left: 120px;
+    }
+    .info-container {
+        margin-left: 32px;
+        width: 704px;
+    }
+/************** media query 3.History mobile ****************/
+    #history {
+        height: 1494px;
+    }
+    .history-title p {
+        margin-left: 340px;
+    }
+    .history-title span {
+        margin-left: 355px;
+    }
+    .history-ul {
+        margin-left: 32px;
+        width: 704px;
+    }
+/******** 세로 라인 위치 *********/
+    .history-ul::before {
+        left: 33%;
+        margin-left: -2px;
+        padding: 20px 0;
+        height: 105%;
+        margin-top: 30px;
+    }
+/************ 세로라인 동그라미 만들기 ************/
+    .history-ul li h4::before {
+        content:""; 
+        position: absolute;
+        left: 31.7%; 
+        transform: translateY(60%);
+        border-radius: 100%;
+        background:#fff; 
+        border: 10px solid #184B9F;
+        box-sizing: border-box;
+    }    
+/************* 1,12,11,10,9,8,5 **************/
+    .history-ul li h4 {
+        text-align: right;
+        margin-right: 500px;
+    }
+    .history-ul li p {
+        display: none;
+    }
+    .history-ul .mobile-h-p {
+        display: block;
+        line-height: 1.5;
+        margin-bottom: 55px;
+        margin-top: -20px;
+        margin-left: 15px;
+    }
+
+/************** media query 4. Organization mobile ****************/
+    #Organization-chart {
+        width: 768px;
+        height: 1450px;        
+    }
+    .Organization-title p {
+        margin-left: 320px;
+        top: -50px;
+        margin-bottom: -50px;
+    }
+    .Organization-title span {
+        margin-left: 320px;
+    }
+    .Org-tree {
+        width: 500px;
+        height: 1156px;
+        margin-left: 134px;
+    }
+    .level-2-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0px;
+    }
+    /***** LEVEL-1 중앙 세로선 *****/
+    .level-1::before {
+        height: 70px;
+    }
+    /***** LEVEL-2 가로선 & 위치 *****/
+    .level-2-wrapper::before {
+        left: 20%;
+        width: 300px;
+    }
+    .level-2-wrapper li {
+        margin-right: 100px;
+    }
+    .level-2-wrapper > li.tab-345::before {
+        height: 0;
+    }
+    .Org-tree .department3,
+    .Org-tree .department4,
+    .Org-tree .department5
+     {
+        margin-top: -100px;
+    }
+    .level-3-desc {
+        margin-left: 0px;
+        font-size: 20px;
+        line-height: 1.8;
+        font-weight: bold;
+    }
+
+/************** media query 5. CERTIFICATION & PATENT mobile ****************/
+    #certification {
+        width: 768px;
+        height: 1105px;
+        margin-top: -10px;
+    }
+    #certification .cert_text .cert_p1 {
+        margin-left: 290px;
+    }
+    #certification .cert_text span{
+        margin-left: 290px;
+    }
+/********************** 특허 이미지 박스 ***********************/
+    .cert_container{
+        width: 100%;
+        height: 1110px;
+        margin-left: 400px;
+    }
+    .cert_li {
+        margin-bottom: 40px;
+    }
+/********************** 특허 이미지 **************************/
+    .cert_image_box {
+        width: 170px;
+        height: 230px;
+        margin-right: 800px;
+    }
+    .cert_img {
+        width: 160px;
+        height: 220px;
+    }
+
+/************** media query 6. DIRECTIONS tablet ****************/
+    #directions {
+        width: 100%;
+        height: 1144px;
+    }
+    .direction-title p {
+        margin-left: 70px;
+    }
+    .direction-title span {
+        margin-left: 100px;
+    }
+    #map {
+        width: 704px;
+        height: 680px;
+        margin-left: -210px;
+    }
+    #directions .cont .info {
+        width: 704px;
+        margin-left: -210px;
+    }
+    #directions .cont .info .tel {
+        margin-left: -180px;
+    }
+    #directions .cont .info .add {
+        margin-left: -190px;
+    }
+    #directions .cont .info .line {
+        width: 704px;
+    }
+
+/************** media query 4.footer mobile ****************/
+    #footer {
+        height: 341px;
+        background-color: #E9E9E9;
+    }
+    #footer .footer-logo {
+        margin-left: -157px;
+    }
+    .footer-wrap .address {
+        letter-spacing: -0.8;
+    }
+    .footer-wrap .address .footer-add {
+        margin-left: -157px;
+        font-size: 18px;
+    }
+    .footer-wrap .address .footer-inform {
+        margin-left: 83px;
+        line-height: 1.7;
+    }
+    .footer-wrap .address .footer-inform-add {
+        margin-left: -918px;
+        margin-top: 90px;
+        line-height: 1.7;
+    }
 }

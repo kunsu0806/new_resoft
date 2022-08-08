@@ -19,6 +19,22 @@ li {
     list-style: none;
 }
 
+/****************************** TOP button ********************************/
+.topBtn{
+    position: fixed;
+    z-index: 999;
+    bottom: 7%;
+    right: 5%;
+    align-items: center;
+    display: none;
+}
+.topBtn .topBtn-a{
+    cursor: pointer;
+}
+.topBtn i{
+    font-size: 50px;
+    color: #184B9F;
+}
 
 /********************************* 헤더부분 *************************************/
 header {
@@ -53,7 +69,7 @@ header ul li {
     overflow: hidden;
     max-width: 100%;
     padding: 0 20px;
-    top: -6px;
+    top: -5px;
 }
 .nav-item {
     color: black;
@@ -105,9 +121,8 @@ header button {
     background: transparent;
     border: 0;
     cursor: pointer;
-    font-weight: bold;
     font-size: 32px;
-    margin-top: 25px;
+    margin-top: 17px;
 }
 
 /************************************* 로고 ****************************************/
@@ -163,6 +178,13 @@ header h1 a img {
 }
 .overlay-content:last-child {
     margin-left: 15px;
+}
+
+.overlay .mobile {
+    display: none;
+}
+.overlay .m-line {
+    display: none;
 }
 
 .overlay a {
@@ -469,4 +491,410 @@ header h1 a img {
     bottom: 50px;
     height: 50px;
     margin-top: -25px;
+}
+
+
+/************** media query 1. Header tablet ****************/
+@media (min-width: 769px) and (max-width: 1280px) {
+    /******* header *******/
+    header h1 a {    
+        margin-left: 231.07px;
+    }
+    header ul {
+        left: -500px;
+    }
+    header .nav {
+        letter-spacing: -2;
+    }
+    #business-header {
+        width: 1280px;
+        height: 300px;
+    }
+    #business-header h1 {
+        font-size: 40px;
+    }
+    .overlay-content:first-child {
+        margin-left: 655px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: -16px;
+    }
+    .overlay-content:last-child {
+        margin-left: 14px;
+    }
+    .overlay .mobile {
+        display: none;
+    }
+    .overlay .m-line {
+        display: none;
+    }
+
+/************** media query 2. Ecoce tablet ****************/
+    #ecoce {
+        width: 1280px;
+        height: 1000px;
+    }
+
+    .ecose_7 {
+        margin-left: 0px;
+    }
+
+    .title_1 {
+        text-align: center;
+        margin-left: -150px;
+    }
+
+    .title_2 {
+        text-align: center;
+        margin-bottom: 50px;
+        margin-left: -140px;
+    }
+
+    .ecoce-right {
+        margin-top: 170px;
+        margin-right: 50px;
+    }
+
+/************** media query 3. Moado tablet ****************/
+    #moado {
+        width: 1280px;
+        height: 820px;
+    }
+
+    .bkg-left {
+        width: 1280px;
+    }
+
+    .bkg-right {
+        width: 1280px;
+    }
+
+    .moado_title {
+        position: static;
+        margin-left: 30px;
+    }
+
+    .moado_title h1 {
+        text-align: center;
+    }
+
+    .moado_title p {
+        text-align: center;
+    }
+
+    .wrapper {
+        width: 1280px;
+        margin-top: 30px;
+    }
+
+    .moado_left img {
+        left: 10px;
+    }
+
+    .moado_right p {
+        top: 120px;
+        right: 40px;
+        left: unset;
+    }
+
+    .moado_right img {
+        right: 40px;
+        top: 200px;
+        left: unset;
+    }
+
+    .moado_right button {
+        top: 350px;
+        right: 40px;
+        left: unset;
+    }
+
+    .moado_middle {
+        top: 229px;
+        left: 500px;
+    }
+
+/************** media query 4. Etc tablet ****************/
+    #remainder {
+        width: 1280px;
+    }
+
+    .remainder-text :nth-child(1) {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .remainder-text :nth-child(2) {
+        margin-left: 600px;
+        text-align: center;
+    }
+
+    .remainder-container {
+        width: 1280px;
+    }
+
+    .remainder-ul {
+        margin-left: 8px;
+    }
+
+    .remainder-li {
+        margin-right: 28px;
+    }
+
+    /************** media query 4. footer tablet ****************/
+    .footer-wrap {
+        width: 1280px;
+    }
+    #footer .footer-logo {
+        margin-left: -157px;
+        width: 100%
+    }
+    .footer-wrap .address .footer-add {
+        margin-left: -157px;
+        font-size: 18px;
+    }
+    .footer-wrap .address .footer-inform {
+        margin-left: 83px;
+        text-rendering: optimizeSpeed;
+        letter-spacing: -1px;
+    }
+    .footer-wrap .address .footer-inform-add {
+        margin-left: -291px;
+        text-rendering: optimizeSpeed;
+        letter-spacing: -1px;
+    }
+}
+
+
+/************** media query mobile ****************/
+@media (max-width: 768px) {
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        width: 100%;
+    }
+    body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+/************** media query 1. Header mobile ****************/
+    header {
+        width: 768px;
+    }
+    header h1 a {    
+        margin-left: 52px;
+    }
+    header .nav a {
+        display: none;
+    }
+    header ul {
+        left: 458px;
+    }
+    .overlay {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    .overlay::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    .overlay .mobile {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .overlay .m-line {
+        display: block;
+        padding: 0;
+        border-bottom: 1px solid #9E9E9E;
+        width: 768px;
+        margin-left: -275px;
+    }
+    .overlay-content {
+        letter-spacing: 0;
+    }
+    .overlay-content:first-child {
+        margin-left: 275px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: 420px;
+        margin-top: -190px;
+    }
+    .overlay-content:last-child {
+        margin-left: 560px;
+        margin-top: -190px;
+    }
+
+/************** media query 2. Ecoce mobile ****************/
+    #ecoce {
+        width: 768px;
+        height: 1350px;
+    }
+
+    .ecose_7 {
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+
+    .title_1,
+    .title_2 {
+        text-align: center;
+    }
+
+    .ecoce-imga {
+        position: static;
+        float: none;
+        max-height: 1000px;
+        margin: 30 auto;
+    }
+
+    .ecoce-right {
+        margin-top: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
+        position: static;
+        text-align: center;
+    }
+
+    .ex_text {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .ecoce-app {
+        float: none;
+        display: inline-block;
+        margin: 15px;
+    }
+    .ecoce-app p {
+        text-decoration: none;
+    }
+    .ecoce-app li {
+        margin-top: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /******* moado *******/
+    #moado {
+        width: 768px;
+        height: 820px;
+    }
+
+    .bkg-left {
+        width: 768px;
+        height: 880px;
+    }
+
+    .bkg-right {
+        width: 768px;
+        height: 880px;
+    }
+
+    .moado_title {
+        position: static;
+        margin-left: 30px;
+    }
+
+    .moado_title h1,
+    .moado_title p {
+        text-align: center;
+    }
+
+    .wrapper {
+        width: 768px;
+        margin-top: 30px;
+    }
+
+    .moado_left img {
+        left: 0px;
+        width: 768px;
+        height: auto;
+    }
+
+    .moado_right p {
+        top: 305px;
+        right: 15px;
+        font-size: 20px;
+        left: unset;
+    }
+
+    .moado_right img {
+        right: 15px;
+        top: 370px;
+        width: 315px;
+        height: auto;
+        left: unset;
+    }
+
+    .moado_right button {
+        top: 460px;
+        right: 15px;
+        left: unset;
+    }
+
+    .moado_middle {
+        top: 415px;
+        left: 250px;
+    }
+
+    .moado_middle img {
+        width: 500px;
+        height: auto;
+    }
+
+    /******* ETC *******/
+    #remainder {
+        width: 768px;
+        height: 1000px;
+    }
+
+    .remainder-text :nth-child(1) {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .remainder-text :nth-child(2) {
+        margin-left: 345px;
+        text-align: center;
+    }
+
+    .remainder-container {
+        width: 768px;
+    }
+
+    .remainder-ul {
+        margin-left: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .remainder-li {
+        margin-right: 28px;
+        margin-bottom: 28px;
+    }
+    .remainder-ul :nth-child(4){
+        margin-left: 130px;
+    }
+/************** media query 4.footer mobile ****************/
+    #footer {
+        height: 341px;
+        background-color: #E9E9E9;
+    }
+    #footer .footer-logo {
+        margin-left: -157px;
+    }
+    .footer-wrap .address {
+        letter-spacing: -0.8;
+    }
+    .footer-wrap .address .footer-add {
+        margin-left: -157px;
+        font-size: 18px;
+    }
+    .footer-wrap .address .footer-inform {
+        margin-left: 83px;
+        line-height: 1.7;
+    }
+    .footer-wrap .address .footer-inform-add {
+        margin-left: -918px;
+        margin-top: 90px;
+        line-height: 1.7;
+    }
 }

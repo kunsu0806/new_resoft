@@ -34,24 +34,6 @@ li {
     list-style: none;
 }
 
-
-/****************************** TOP button ********************************/
-.topBtn{
-    position: fixed;
-    z-index: 999;
-    bottom: 7%;
-    right: 5%;
-    align-items: center;
-    display: none;
-}
-.topBtn .topBtn-a{
-    cursor: pointer;
-}
-.topBtn i{
-    font-size: 50px;
-    color: #184B9F;
-}
-
 /********************************* 헤더부분 *************************************/
 header {
     width: 100%;
@@ -105,6 +87,7 @@ header nav ul li.btn button {
     margin-left: 30px;
     font-size: 32px;
 }
+
 .hd-1 {
     position: absolute;
     top: 400px;
@@ -130,12 +113,6 @@ header nav ul li.btn button {
 /************************* nav-bar ****************************/
 .nav {
     margin-right: -9px;   
-}
-#nav-bar li {
-    margin-top: 2px;
-}
-#nav-bar .btn {
-    margin-top: -5px;
 }
 #nav-bar a {
     font-weight: bold;
@@ -171,20 +148,13 @@ header nav ul li.btn button {
     line-height: 0.7;
 }
 .overlay-content:first-child {
-    margin-left: 1177px;
+    margin-left: 1160px;
 }
 .overlay-content:nth-child(2) {
     margin-left: -22px;
 }
 .overlay-content:last-child {
     margin-left: 10px;
-}
-
-.overlay .mobile {
-    display: none;
-}
-.overlay .m-line {
-    display: none;
 }
 
 .overlay a {
@@ -587,9 +557,9 @@ span.cbp-biprev:before {
 }
 
 .aniimg {
+    /* background-color: yellow; */
     width: 680px;
     height: 680px;
-    margin-top: -70px;
 }
 .aniimg_small {
     display: none;
@@ -733,7 +703,7 @@ span.cbp-biprev:before {
 }
 
 /*************** reference ***************/
-#Reference {
+#reference {
     width: 100%;
     height: 1034px;
 }
@@ -816,11 +786,10 @@ span.cbp-biprev:before {
 }
 
 /************** media query 1. Header tablet ****************/
-@media (min-width: 769px) and (max-width: 1280px) {
+@media (min-width: 768px) and (max-width: 1279px) {
     body {
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
-        width: 1280px;
     }
     body::-webkit-scrollbar {
         display: none; /* Chrome, Safari, Opera*/
@@ -834,23 +803,17 @@ span.cbp-biprev:before {
     }
     header nav ul li {
         margin-left: 91.5px;
-        margin-right: -97px;
+        margin-right: -100px;
         letter-spacing: -1;
     }
-    .overlay .mobile {
-        display: none;
-    }
-    .overlay .m-line {
-        display: none;
-    }
     .overlay-content:first-child {
-        margin-left: 661px;
+        margin-left: 666px;
     }
     .overlay-content:nth-child(2) {
-        margin-left: -26px;
+        margin-left: -32px;
     }
     .overlay-content:last-child {
-        margin-left: 4px;
+        margin-left: -3px;
     }
     .hd-1 {
         margin-left: -113px;
@@ -869,7 +832,7 @@ span.cbp-biprev:before {
     }
 
 /************** media query 2. news tablet ****************/
-   .news{
+.news{
     width: 1280px;
     height: 1016px;
     margin: 0;
@@ -903,24 +866,30 @@ span.cbp-biprev:before {
         margin: 0 auto;
         display: block;
     }
+    
+    
     .pject-con-wrap {
         padding-top: 100px;
     }
+    
     .pject-text {
         text-align: center;
         margin-top: -960px;
-    }   
+    }
+    
     .pject-text h2 {
         font-weight: bold;
         font-size: 40px;
         color: #1E1E1E;
     }
+    
     .pject-text .pject-eng {
         color: #C8C8C8;
         padding-bottom: 50px;
         font-weight: Medium;
         font-size: 18px;
     }
+    
     .pject-text .pject-con {
         color: #1E1E1E;
         font-weight: bold;
@@ -984,261 +953,47 @@ span.cbp-biprev:before {
         left: 340px;
     }
 
-/************** media query 5. reference tablet ****************/
-    #Reference {
-       position:relative;
-       top:150px;
-       left:-100px;
-    }
-    .refer_web {
-        width:1000px;
-        height:1334px;
-    }
-    .refer_header {
-        text-align: center;
-    }
-    .refer-ul {
-        margin-left:150px;
-        align-items: center;
-        text-align: center;
-    }
-    .Reference_iconbox {
-        width:220px;
-        height:100px;
-        margin-right:30px;
-    }
+/************** media query 4. reference tablet ****************/
+#Reference{
+    position:relative;
+    top:150px;
+    left:-100px;
+    
+ }
+ 
+ .refer_web{
+ width:1000px;
+ height:1334px;
+     
+     }
+    
+ .refer_header{
+     text-align: center;
+     }
+ .refer-ul{
+         margin-left:150px;
+         align-items: center;
+         text-align: center;
+     }
+     
+ .Reference_iconbox{
+        
+         width:220px;
+         height:100px;
+         margin-right:30px;
+        
+     }
 
-/************** media query 6. footer tablet ****************/
-    #footer {
-        position: relative;
-        top:600px;
-    }
-    .footer-wrap {
-        width: 1280px;
-    }
-    #footer .footer-logo {
-        margin-left: -157px;
-        width: 100%
-    }
-    .footer-wrap .address .footer-add {
-        margin-left: -157px;
-        font-size: 18px;
-    }
-    .footer-wrap .address .footer-inform {
-        margin-left: 83px;
-        text-rendering: optimizeSpeed;
-        letter-spacing: -1px;
-    }
-    .footer-wrap .address .footer-inform-add {
-        margin-left: -291px;
-        text-rendering: optimizeSpeed;
-        letter-spacing: -1px;
-    }
-}
-
-/********************************* media query mobile *************************************/
-@media (max-width: 768px) {
-    body {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-    }
-    body::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera*/
-    }
-/************** media query 1. Header mobile ****************/
-    header h1 a {    
-        margin-left: 32px;
-    }
-    header .nav {
-        margin-right: -228px;
-    }
-    header .nav a {
-        display: none;
-    }
-    header .nav .btn {
-        margin-left: -50px;
-    }
-    .overlay .mobile {
-        display: block;
-        margin-bottom: 10px;
-    }
-    .overlay .m-line {
-        display: block;
-        padding: 0;
-        border-bottom: 1px solid #9E9E9E;
-        width: 768px;
-        margin-left: -255px;
-    }
-    .overlay-content {
-        letter-spacing: 0;
-    }
-    .overlay-content:first-child {
-        margin-left: 255px;
-    }
-    .overlay-content:nth-child(2) {
-        margin-left: 400px;
-        margin-top: -190px;
-    }
-    .overlay-content:last-child {
-        margin-left: 540px;
-        margin-top: -190px;
-    }
-    .hd-1 {
-        margin-left: -166px;
-    }
-    .cbp-bicontrols {
-        margin-left: 35px;
-    }
-
-/************** media query 2. news mobile ****************/
-    .news{
-        width: 768px;
-        height: 1016px;
-        margin: 0;
-        margin-bottom: -100px;
-    }
-    .news .title{
-        text-align: center;
-        margin-top: 100px;
-    }
-    .news .cont {
-        display: grid;
-        grid-template-columns: repeat(2, 298px);
-        grid-template-rows: 1fr 1fr;
-        justify-content: center;
-        gap: 50px 40px;
-    }
-    .news .cont .line1,
-    .news .cont .line2,
-    .news .cont .line3 {
-        display: none;
-    }
-
-/************** media query 3. project mobile ****************/
-    .pject-wrap {
-        width: 100%;
-        height: 1911px;
-        z-index: 80;
-        position: relative;
-    }
-    .pject-con-wrap {
-        margin: 0 auto;
-        display: block;
-    }
-    .pject-con-wrap {
-        padding-top: 100px;
-    }
-    .pject-text {
-        text-align: center;
-        margin-top: -960px;
-    }   
-    .pject-text h2 {
-        font-weight: bold;
-        font-size: 40px;
-        color: #1E1E1E;
-    }
-    .pject-text .pject-eng {
-        color: #C8C8C8;
-        padding-bottom: 50px;
-        font-weight: Medium;
-        font-size: 18px;
-    }
-    .pject-text .pject-con {
-        color: #1E1E1E;
-        font-weight: bold;
-        font-size: 26px;
-        line-height: 2;
-        letter-spacing: -0.5;
-    }
-    .motion-pic-1 {
-        display: none;
-    }
-    .motion-pic-2 {
-        display: block;
-        margin-left: 39px;
-    }
-    .pject-ecoce-wrap {
-        margin-left: 117px;
-        top: 750px;
-    }
-    .pject-moado-wrap {
-        margin-left: 117px;
-        top: 750px;
-    }
-
-/************** media query 4. service mobile ****************/
-    .service {
-        height: 1853px;
-        background-color: #F2F6FC;
-        margin-top: -100px;
-        padding-top: 100px;
-    }
-    .service .left .title :nth-child(1) {
-        margin-left: 324px;
-    }
-    .service .left .title :nth-child(2) {
-        margin-left: 349px;
-    }
-    .service .left .title :nth-child(3) {
-        margin-left: 120px;
-        text-rendering: optimizeSpeed;
-        letter-spacing: -1.8px;
-    }
-    .aniimg {
-        display: none;
-    }
-    .aniimg_small {
-        display: block;
-        margin-left: 117px;
-        margin-top: -60px;
-    }
-    .right {
-        top: 44.2%;
-        left: -78.3%;
-        margin-left: -96px;
-    }
-    .web {
-        position: absolute;
-        left: 395px;
-    }
-    .xr {
-        position: absolute;
-        left: 395px;
-    }
-
-/************** media query 5. reference mobile ****************/
-    #Reference {
-        position:relative;
-        width: 768px;
-        height: 1434px;
-        top: 100px;
-        left: -105px;
-    }
-    .refer_web {
-        width: 704px;
-        height: 1334px;
-        margin-left: -100px;
-    }
-    .refer_header {
-        text-align: center;
-    }
-    .Reference_iconbox {
-        margin-top: 20px;
-        margin-right: 0px;
-    }
-/************** media query 6. footer mobile ****************/
-    #footer {
-        height: 331px;
-        background-color: #E9E9E9;
-        margin-top: 230px;
+/************** media query 4. footer tablet ****************/
+#footer{
+    position: relative;
+    top:600px;
     }
     #footer .footer-logo {
         margin-left: -157px;
     }
     .footer-wrap .address {
-        letter-spacing: -0.8px;
-        text-rendering: optimizeSpeed;
-        height: 220px;
+        letter-spacing: -0.8;
     }
     .footer-wrap .address .footer-add {
         margin-left: -157px;
@@ -1246,11 +1001,8 @@ span.cbp-biprev:before {
     }
     .footer-wrap .address .footer-inform {
         margin-left: 83px;
-        line-height: 1.7;
     }
     .footer-wrap .address .footer-inform-add {
-        margin-left: -918px;
-        margin-top: 90px;
-        line-height: 1.7;
+        margin-left: -205px;
     }
 }

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/company.css">
     <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/01f338039f.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/dbfce80840.js" crossorigin="anonymous"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -22,18 +23,24 @@
 </head>
 
 <body>
+<!-------------------------------------------------------------- top button ----------------------------------------------------------------->
+    <div class="topBtn">
+        <a href="#" class="topBtn-a"><i class="fa-solid fa-circle-chevron-up"></i></a>
+    </div>
+    <script src="./js/topBtn.js"></script>
+
     <header>
         <div class="container" id="company">
             <h1>
 <!--------------------- Resoft Logo ----------------------->
-                <a href="index.html"><img src="./img/Header-Logo.svg"></a>
+                <a href="main.html"><img src="./img/Header-Logo.svg"></a>
             </h1>
 <!----------------------- Nav Bar ------------------------->
             <ul>
                 <li class="nav">
-                    <a href="company.html" class="nav-item is-active" active-color="blue">회사소개</a>
-                    <a href="business.html" class="nav-item" active-color="blue">사업현황</a>
-                    <a href="information.html" class="nav-item" active-color="blue">정보마당</a>
+                    <a href="company.html" class="nav-item is-active" active-color="#78EAFF">회사소개</a>
+                    <a href="business.html" class="nav-item" active-color="#78EAFF">사업현황</a>
+                    <a href="information.html" class="nav-item" active-color="#78EAFF">정보마당</a>
                     <span class="nav-indicator"></span>
                 </li>
                 <script src="./js/header5.js"></script>
@@ -51,6 +58,8 @@
 <!------------------------- Hamberger Navbar --------------------------->
         <div id="myNav" class="overlay">
             <div class="overlay-content">
+                <a class="mobile" href="company.html">회사소개</a>
+                <a class="m-line"href=""></a>
                 <a href="company.html#introduce-resoft">REsoft소개</a>
                 <a href="company.html#history">연혁</a>
                 <a href="company.html#Organization-chart">조직도</a>
@@ -58,11 +67,13 @@
                 <a href="company.html#directions">오시는 길</a>
             </div>
             <div class="overlay-content">
+                <a class="mobile" href="business.html">사업현황</a>
                 <a href="business.html#ecoce">ECOCE</a>
                 <a href="business.html#moado">moaDo</a>
                 <a href="business.html#remainder">Etc</a>
             </div>
             <div class="overlay-content">
+                <a class="mobile" href="information.html">정보마당</a>
                 <a href="information.html#information">REsoft소식</a>
             </div>
         </div>
@@ -86,8 +97,8 @@
             <p class="title-sub">ABOUT US</p>
         </div>
         <table class="info-container">
-            <tbody>
-                <tr class="info-box">
+            <tbody class="mobile-box">
+                <tr class="info-box" style="border-top: 1px solid #c8c8c8">
                     <td class="info-p"><p>회사명</p></td>
                     <td class="info-p2" ><p>(주)리소프트</p></td>
                 </tr>
@@ -148,30 +159,40 @@
                 <h1>2021</h1>
                 <h4 class="history-point">12</h4>
                 <p>대구여성인력개발센터 MOU 협약 (여성IT인재 현장실습)</p>
+                <p class="mobile-h-p">대구여성인력개발센터 MOU 협약<br>(여성IT인재 현장실습)</p>
                 <p>대구가톨릭대학교 계약학과 MOU 협약 (ICTAI융합학과)</p>
+                <p class="mobile-h-p">대구가톨릭대학교 계약학과 MOU 협약<br>(ICTAI융합학과)</p>
                 <p>기업부설연구소(연구개발전담부서) 등록</p>
+                <p class="mobile-h-p">기업부설연구소(연구개발전담부서) 등록</p>
             </li>
             <li>
                 <h4>11</h4>
                 <p>제 38류, 제 45류 상표등록 출원 (Mmate : 제 40-1799224호, 제 40-1799225호)</p>
+                <p class="mobile-h-p">제 38류, 제 45류 상표등록 출원<br>(Mmate : 제 40-1799224호, 제 40-1799225호)</p>
             </li>
             <li>
                 <h4>10</h4>
                 <p>서울특별시 송파구청 앱 개발 (제8회 한성백제마라톤 비대면 대회)</p>
+                <p class="mobile-h-p">서울특별시 송파구청 앱 개발<br>(제8회 한성백제마라톤 비대면 대회)</p>
                 <p>대구광역시체육회 앱 개발 (2021 대구 마스크쓰햬 컬러풀 핫플 걷기)</p>
+                <p class="mobile-h-p">대구광역시체육회 앱 개발<br>(2021 대구 마스크쓰햬 컬러풀 핫플 걷기)</p>
                 <p>대구광역시 달서구체육회 앱 개발 (제15회 언택트 달서 하프마라톤 대회)</p>
+                <p class="mobile-h-p">대구광역시 달서구체육회 앱 개발<br>(제15회 언택트 달서 하프마라톤 대회)</p>
             </li>
             <li>
                 <h4>9</h4>
                 <p>대구 경북지방중소벤처기업청 여성기업 등록</p>
+                <p class="mobile-h-p">대구 경북지방중소벤처기업청 여성기업 등록</p>
             </li>
             <li>
                 <h4>8</h4>
                 <p>구미대학교 MOU 협약 (현장실습학기제)</p>
+                <p class="mobile-h-p">구미대학교 MOU 협약 (현장실습학기제)</p>
             </li>
             <li>
                 <h4>5</h4>
                 <p>(주)리소프트 회사 설립</p>
+                <p class="mobile-h-p">(주)리소프트 회사 설립</p>
             </li>
         </ul>
     </section>
@@ -185,7 +206,7 @@
             <p>조직도</p>
             <span>ORGANIZATION</span>
         </div>
-        <div class="org-tree">
+        <div class="Org-tree">
             <h1 class="level-1 CEO">대표이사</h1>
             <ol class="level-2-wrapper">
                 <li>
@@ -201,41 +222,39 @@
                 <li>
                     <h2 class="level-2 department2">개발부</h2>
                     <div class="level-3-desc">
-                        • 유저 Needs 분석<br>
-                        • 고객 수요 확인<br>
-                        • BM 설계/기획<br>
-                        • 사업화 전략 수립<br>
-                        • 사업계획서 작성
+                        • DB 분석/설계<br>
+                        • Cloud 서버 관리<br>
+                        • 기능 정의<br>
+                        • 기능 구현<br>
+                        • 기능 테스트
                     </div>
                 </li>
-                <li>
+                <li class="tab-345">
                     <h2 class="level-2 department3">디자인부</h2>
                     <div class="level-3-desc">
-                        • 유저 Needs 분석<br>
-                        • 고객 수요 확인<br>
-                        • BM 설계/기획<br>
-                        • 사업화 전략 수립<br>
-                        • 사업계획서 작성
+                        • 디자인 트랜드 분석<br>
+                        • 브랜드 디자인<br>
+                        • 웹사이트 디자인<br>
+                        • 모바일 앱 디자인<br> 
+                        • 상품개발 디자인
                     </div>
                 </li>
-                <li>
+                <li class="tab-345">
                     <h2 class="level-2 department4">마케팅부</h2>
                     <div class="level-3-desc">
-                        • 유저 Needs 분석<br>
-                        • 고객 수요 확인<br>
-                        • BM 설계/기획<br>
-                        • 사업화 전략 수립<br>
-                        • 사업계획서 작성
+                        • 서비스 시장조사<br>
+                        • 시장동향 분석<br> 
+                        • 시장성 검증<br> 
+                        • 온라인 채널 운영<br> 
+                        • 오프라인 광고
                     </div>
                 </li>
-                <li>
+                <li class="tab-345">
                     <h2 class="level-2 department5">경영지원부</h2>
                     <div class="level-3-desc">
-                        • 유저 Needs 분석<br>
-                        • 고객 수요 확인<br>
-                        • BM 설계/기획<br>
-                        • 사업화 전략 수립<br>
-                        • 사업계획서 작성
+                        • 경영 무 지원<br> 
+                        • 업무 환경 지원<br> 
+                        • 세무 업무 지원
                     </div>
                 </li>
             </ol>
@@ -309,7 +328,7 @@
         </div>
         <div class="cont">
             <div>
-                <div id="map" class="kakaomap" style="width:1440px;height:680px;"></div>
+                <div id="map" class="kakaomap"></div>
                 <script type="text/javascript"
                     src="//dapi.kakao.com/v2/maps/sdk.js?appkey=78f4f36bf8cec7a4fe3231201a6f8b56"></script>
                 <script>
