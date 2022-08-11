@@ -24,7 +24,7 @@ li {
     position: fixed;
     z-index: 999;
     bottom: 7%;
-    right: 5%;
+    right: 3%;
     align-items: center;
     display: none;
 }
@@ -50,6 +50,9 @@ header .container{
     width: 100%;
     border: 1px solid #DBDBDB;
     height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 header ul {
@@ -144,6 +147,7 @@ header h1 a img {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
 }
 #information-header h1 {
     color: white;
@@ -153,13 +157,13 @@ header h1 a img {
 .overlay {
     height: 210px;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
     top: 80px;
     left: 0;
     background-color: rgba(47, 88, 163, 0.9);
     overflow-y: hidden;
     transition: 0.5s;
-    position: absolute;
+    position: fixed;
     display: none;
 }
 
@@ -172,13 +176,13 @@ header h1 a img {
     line-height: 0.7;
 }
 .overlay-content:first-child {
-    margin-left: 1157px;
+    margin-left: 1139px;
 }
 .overlay-content:nth-child(2) {
-    margin-left: -18px;
+    margin-left: -17px;
 }
 .overlay-content:last-child {
-    margin-left: 15px;
+    margin-left: 14px;
 }
 
 .overlay .mobile {
@@ -229,7 +233,9 @@ header h1 a img {
     margin-left: 20px;
     font-size: 16px;
 }
-
+.news .left-button:hover p{
+    color: #476e9e;
+}
 .news .infomation-title .title-p{
     text-align: left;
     font-size:  40px;
@@ -325,11 +331,11 @@ header h1 a img {
     margin-left:780px;
 }
 
-.bot-button:hover {
+.news .text-button .bot-button:hover{
 	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
 	background-color:#476e9e;
 }
-.bot-button2:hover {
+.news .text-button .bot-button2:hover {
 	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
 	background-color:#476e9e;
 }
@@ -384,7 +390,7 @@ header h1 a img {
         margin-left: 231.07px;
     }
     header ul {
-        left: -500px;
+        right: -115px;
     }
     header .nav {
         letter-spacing: -2;
@@ -397,7 +403,7 @@ header h1 a img {
         font-size: 40px;
     }
     .overlay-content:first-child {
-        margin-left: 655px;
+        margin-left: 598px;
     }
     .overlay-content:nth-child(2) {
         margin-left: -16px;

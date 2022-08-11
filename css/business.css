@@ -24,7 +24,7 @@ li {
     position: fixed;
     z-index: 999;
     bottom: 7%;
-    right: 5%;
+    right: 3%;
     align-items: center;
     display: none;
 }
@@ -50,6 +50,9 @@ header .container{
     width: 100%;
     border: 1px solid #DBDBDB;
     height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 header ul {
@@ -143,6 +146,7 @@ header h1 a img {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
 }
 #business-header h1 {
     color: white;
@@ -152,13 +156,13 @@ header h1 a img {
 .overlay {
     height: 210px;
     width: 100%;
-    z-index: 1;
+    z-index: 1000;
     top: 80px;
     left: 0;
     background-color: rgba(47, 88, 163, 0.9);
     overflow-y: hidden;
     transition: 0.5s;
-    position: absolute;
+    position: fixed;
     display: none;
 }
 
@@ -171,13 +175,13 @@ header h1 a img {
     line-height: 0.7;
 }
 .overlay-content:first-child {
-    margin-left: 1157px;
+    margin-left: 1139px;
 }
 .overlay-content:nth-child(2) {
-    margin-left: -18px;
+    margin-left: -17px;
 }
 .overlay-content:last-child {
-    margin-left: 15px;
+    margin-left: 14px;
 }
 
 .overlay .mobile {
@@ -501,7 +505,7 @@ header h1 a img {
         margin-left: 231.07px;
     }
     header ul {
-        left: -500px;
+        right: -115px;
     }
     header .nav {
         letter-spacing: -2;
@@ -514,7 +518,7 @@ header h1 a img {
         font-size: 40px;
     }
     .overlay-content:first-child {
-        margin-left: 655px;
+        margin-left: 598px;
     }
     .overlay-content:nth-child(2) {
         margin-left: -16px;
@@ -668,15 +672,14 @@ header h1 a img {
 
 /************** media query mobile ****************/
 @media (max-width: 768px) {
+/************** media query 1. Header mobile ****************/
     body {
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
-        width: 100%;
     }
     body::-webkit-scrollbar {
         display: none; /* Chrome, Safari, Opera*/
     }
-/************** media query 1. Header mobile ****************/
     header {
         width: 768px;
     }
@@ -810,13 +813,13 @@ header h1 a img {
 
     .moado_right p {
         top: 305px;
-        right: 15px;
+        right: 20px;
         font-size: 20px;
         left: unset;
     }
 
     .moado_right img {
-        right: 15px;
+        right: 20px;
         top: 370px;
         width: 315px;
         height: auto;
@@ -825,7 +828,7 @@ header h1 a img {
 
     .moado_right button {
         top: 460px;
-        right: 15px;
+        right: 20px;
         left: unset;
     }
 

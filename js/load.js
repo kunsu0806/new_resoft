@@ -1,4 +1,4 @@
-if (window.matchMedia("(min-width: 1281px) and (max-width: 1920px)").matches) {
+if (window.matchMedia("(min-width: 1281px)").matches) {
     $(function () {
         $(".card").hide();
         var array = [];
@@ -25,7 +25,7 @@ if (window.matchMedia("(min-width: 1281px) and (max-width: 1920px)").matches) {
                 hiddenArray[i].style.display = 'block';
             }
             load.style.display = 'none';
-            infoHight.style.height = '2692px';
+            
         });
     });
 }
@@ -57,7 +57,7 @@ if (window.matchMedia("(min-width: 769px) and (max-width: 1280px)").matches) {
                 hiddenArray[i].style.display = 'block';
             }
             load.style.display = 'none';
-            infoHight.style.height = '2982px';
+            
         });
     });
 }
@@ -93,7 +93,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
                     hiddenArray[i].style.display = 'block';
                     count += 1;
                 }
-                infoHight.style.height = '2190px';
+                
             }
             else if(count == 2){
                 hiddenArray = array.slice(4, 6);
@@ -102,7 +102,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
                     hiddenArray[i].style.display = 'block';
                     count += 1;
                 }
-                infoHight.style.height = '3118px';
+                
             }
             else if(count == 4){
                 hiddenArray = array.slice(6, 8);
@@ -111,7 +111,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
                     hiddenArray[i].style.display = 'block';
                     count += 1;
                 }
-                infoHight.style.height = '4042px';
+        
             }
             else if(count == 6){
                 hiddenArray = array.slice(8, 10);
@@ -120,7 +120,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
                     hiddenArray[i].style.display = 'block';
                     count += 1;
                 }
-                infoHight.style.height = '4970px';
+                
                 load.style.display = 'none';
             }
         });
