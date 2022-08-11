@@ -11,6 +11,15 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Aos animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <script>
+        window.onload = function(){
+            setDraggable(false)
+            setZoomable(false)
+        }
+    </script>
 
 </head>
 
@@ -144,27 +153,51 @@
         
         <div class="remainder-container">
             <ul class="remainder-ul">
-                <li class="remainder-li">
+                <li class="remainder-li" 
+                data-aos="zoom-out-down" 
+                data-aos-offset="500" 
+                data-aos-easing="ease-out-sine"
+                data-aos-duration="1000">
                     <div class="remainder-image-box">
                         <img src="./img/mask-go.png" class="remainder-img">                
                     </div>
                 </li>
-                <li class="remainder-li">
+                <li class="remainder-li"
+                data-aos="zoom-out-down" 
+                data-aos-offset="500"
+                data-aos-delay="100" 
+                data-aos-easing="ease-out-sine"
+                data-aos-duration="1000">
                     <div class="remainder-image-box">
                         <img src="./img/urology.png" class="remainder-img">                
                     </div>
                 </li>
-                <li class="remainder-li">
+                <li class="remainder-li"
+                data-aos="zoom-out-down" 
+                data-aos-offset="500"
+                data-aos-delay="300" 
+                data-aos-easing="ease-out-sine"
+                data-aos-duration="1000">
                     <div class="remainder-image-box">
                         <img src="./img/maroton-mobile.png" class="remainder-img">                
                     </div>
                 </li>
-                <li class="remainder-li">
+                <li class="remainder-li"
+                data-aos="zoom-out-down" 
+                data-aos-offset="500"
+                data-aos-delay="500" 
+                data-aos-easing="ease-out-sine"
+                data-aos-duration="1000">
                     <div class="remainder-image-box">
                         <img src="./img/solab.png" class="remainder-img">                
                     </div>
                 </li>
-                <li class="remainder-li">
+                <li class="remainder-li"
+                data-aos="zoom-out-down" 
+                data-aos-offset="500"
+                data-aos-delay="700" 
+                data-aos-easing="ease-out-sine"
+                data-aos-duration="1000">
                     <div class="remainder-image-box">
                         <img src="./img/kibwa-mobile.png" class="remainder-img">                
                     </div>
@@ -172,6 +205,9 @@
             </ul>
         </div>
     </div>
+    <script> 
+            AOS.init(); // 자바스크립트로 init()을 해야 동작한다.
+    </script>
 <!------------------------- footer ------------------------------->
     <footer id="footer">
         <div class="footer-wrap">
