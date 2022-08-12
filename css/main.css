@@ -68,7 +68,9 @@ header .container{
     top: 0;
     z-index: 1000;
 }
-
+.container .roll {
+    background-color: #1E1E1E;
+}
 header nav ul{
     display: flex; /* 메뉴 가로 배치 */
 }
@@ -154,12 +156,10 @@ header nav ul li.btn button {
     z-index: 1000;
     top: 80px;
     left: 0;
-    background-color: rgba(47, 88, 163, 0.9);
-    transition: 0.5s;
+    background-color: rgba(47, 88, 163, 0.7);
     position: fixed;
     display: none;
 }
-
 .overlay-content {
     float: left;
     top: 10%;

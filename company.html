@@ -47,15 +47,11 @@
     </div>
 <!--------------------------- Hamberger Script ----------------------------->
     <script>
-        function doDisplay(){
-            var con = document.getElementById("myNav");
-            if(con.style.display == 'block'){ 		
-                con.style.display = 'none';
-            }else{ 		
-                con.style.display = 'block'; 	
-            }
+        function btn_toggle(){
+            $("#myNav").fadeToggle("slow");
         }
     </script>
+
 <!-------------------------------------------------------------- top button ----------------------------------------------------------------->
     <div class="topBtn">
         <a href="#" class="topBtn-a"><i class="fa-solid fa-circle-chevron-up"></i></a>
@@ -80,7 +76,7 @@
 
 <!--------------------- Hamberger Button ---------------------->
                 <li class="btn">
-                    <button type="button" onclick="doDisplay()"><i class="fa-solid fa-bars" style="color:black"></i></button>
+                    <button type="button" onclick="btn_toggle()"><i class="fa-solid fa-bars" style="color:black"></i></button>
                 </li>
             </ul>     
         </div>
@@ -88,6 +84,20 @@
         <div id="company-header">
             <h1>회사소개</h1>
         </div>
+<!-------------------------------- header scroll -------------------------------->
+        <script>
+            $(document).ready(function(){       
+                var scroll_pos = 0;
+                $(document).scroll(function() { 
+                    scroll_pos = $(this).scrollTop();
+                    if(scroll_pos > 80) {
+                        $(".container").css('background-color', 'rgba(47, 88, 163, 0.9)');
+                    } else {
+                        $(".container").css('background-color', 'transparent');
+                    }
+                });
+            });
+        </script>
 
     </header>
 
@@ -331,7 +341,7 @@
             <div>
                 <div id="map" class="kakaomap"></div>
                 <script type="text/javascript"
-                    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=78f4f36bf8cec7a4fe3231201a6f8b56"></script>
+                    src="//dapi.kakao.com/v2/maps/sdk.js?appkey=42b951f0799cbc39642a7b46392fd517"></script>
                 <script>
                     var mapContainer = document.getElementById('map'), // 지도를 표시할 div
                         mapOption = {

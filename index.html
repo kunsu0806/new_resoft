@@ -42,15 +42,11 @@
     </div>
 <!--------------------------- Hamberger Script ----------------------------->
     <script>
-        function doDisplay(){
-            var con = document.getElementById("myNav");
-            if(con.style.display == 'block'){ 		
-                con.style.display = 'none';
-            }else{ 		
-                con.style.display = 'block'; 	
-            }
+        function btn_toggle(){
+            $("#myNav").fadeToggle("slow");
         }
     </script>
+    
 <!-------------------------------------------------------------- top button ----------------------------------------------------------------->
     <div class="topBtn">
         <a href="#" class="topBtn-a"><i class="fa-solid fa-circle-chevron-up"></i></a>
@@ -76,8 +72,8 @@
                         <a href="information.html">정보마당</a>
                     </li>
 <!--------------------- Hamberger Button ---------------------->
-                    <li class="btn">
-                        <button type="button" onclick="doDisplay()"><i class="fa-solid fa-bars" style="color:white"></i></button>
+                    <li class="btn"> 
+                        <button type="button" onclick="btn_toggle()"><i class="fa-solid fa-bars" style="color:white"></i></button>
                     </li>
                 </ul>
             </nav>    
@@ -117,6 +113,20 @@
 				cbpBGSlideshow.init();
 			});
 		</script>
+<!-------------------------------- header scroll -------------------------------->
+        <script>
+            $(document).ready(function(){       
+                var scroll_pos = 0;
+                $(document).scroll(function() { 
+                    scroll_pos = $(this).scrollTop();
+                    if(scroll_pos > 700) {
+                        $(".container").css('background-color', 'rgba(47, 88, 163, 0.9)');
+                    } else {
+                        $(".container").css('background-color', 'transparent');
+                    }
+                });
+            });
+        </script>
     </header>
 <!------------------------------------- Header End --------------------------------------->
 
@@ -129,7 +139,7 @@
             </div>
             <div class="cont">
                 <div class="link">
-                    <a href="">
+                    <a href="information.html">
                         <div class="img-wrap"><img src="./img/news_mi.png"></div>
                         <p>Lorem ipsum dolor sit amet, consetetur sdipscing elit...</p>
                         <p>2022.01.01</p>
@@ -137,7 +147,7 @@
                 </div>
                 <div class="line1"></div>
                 <div class="link">
-                    <a href="">
+                    <a href="information.html">
                         <div class="img-wrap"><img src="./img/news_mi.png"></div>
                         <p>Lorem ipsum dolor sit amet, consetetur sdipscing elit...</p>
                         <p>2022.01.01</p>
@@ -145,7 +155,7 @@
                 </div>
                 <div class="line2"></div>
                 <div class="link">
-                    <a href="">
+                    <a href="information.html">
                         <div class="img-wrap"><img src="./img/news_mi.png"></div>
                         <p>Lorem ipsum dolor sit amet, consetetur sdipscing elit...</p>
                         <p>2022.01.01</p>
@@ -153,7 +163,7 @@
                 </div>
                 <div class="line3"></div>
                 <div class="link">
-                    <a href="">
+                    <a href="information.html">
                         <div class="img-wrap"><img src="./img/news_mi.png"></div>
                         <p>Lorem ipsum dolor sit amet, consetetur sdipscing elit...</p>
                         <p>2022.01.01</p>

@@ -160,9 +160,7 @@ header h1 a img {
     z-index: 1000;
     top: 80px;
     left: 0;
-    background-color: rgba(47, 88, 163, 0.9);
-    overflow-y: hidden;
-    transition: 0.5s;
+    background-color: rgba(47, 88, 163, 0.7);
     position: fixed;
     display: none;
 }
