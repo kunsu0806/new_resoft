@@ -22,7 +22,8 @@
 }
 
 body {
-    max-width: 1920px;
+    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
     overflow-x: hidden;
     overflow-y: auto;
@@ -54,6 +55,7 @@ header {
     width: 100%;
     z-index: 1;
     top:0;
+    position: relative;
 }
 /* position fixed를 제거 */
 
@@ -61,7 +63,7 @@ header .container{
     display: flex;
     justify-content: space-between; /* 양 끝으로 배치 */
     align-items: center;
-    width: 100%;
+    width: 1920px;
     border: 1px solid #ffff;
     height: 80px;
     position: fixed;
@@ -108,7 +110,7 @@ header nav ul li.btn button {
 }
 .hd-1 {
     position: absolute;
-    top: 400px;
+    top: -300px;
     left: 240px;
     color: #ffff;
     letter-spacing: 0;
@@ -130,7 +132,9 @@ header nav ul li.btn button {
 
 /************************* nav-bar ****************************/
 .nav {
-    margin-right: -9px;   
+    margin-right: -250px;
+    width: 100%;
+    margin-left: 640px;
 }
 #nav-bar li {
     margin-top: 2px;
@@ -152,7 +156,7 @@ header nav ul li.btn button {
 /************************** Hidden ****************************/
 .overlay {
     height: 210px;
-    width: 100%;
+    width: 1920px;
     z-index: 1000;
     top: 80px;
     left: 0;
@@ -169,7 +173,7 @@ header nav ul li.btn button {
     line-height: 0.7;
 }
 .overlay-content:first-child {
-    margin-left: 1161px;
+    margin-left: 1158px;
 }
 .overlay-content:nth-child(2) {
     margin-left: -22px;
@@ -204,7 +208,7 @@ header nav ul li.btn button {
 	list-style: none;
 	width: 100%;
     position: absolute;
-	top: 0;
+	top: -730%;
 	left: 0;
 	z-index: -1;
 	padding: 0;
@@ -422,7 +426,6 @@ span.cbp-biprev:before {
     background: #F9F8FF;
     width: 100%;
     height: 1147px;
-    z-index: 80;
 }
 
 .pject-con-wrap {
@@ -461,9 +464,13 @@ span.cbp-biprev:before {
 
 .motion-pic-1 {
     margin-top: 61px;
+    width: 680px;
+    height: 591px;
 }
 .motion-pic-2 {
     display: none;
+    width: 680px;
+    height: 591px;
 }
 
 .pject-con-right {
@@ -504,7 +511,6 @@ span.cbp-biprev:before {
     position: absolute;
     color: #FFFFFF;
     font-size: 17px;
-    z-index: 2;
     padding: 260px 0 0 21px;
     top: 0;
     right: 0;
@@ -513,7 +519,6 @@ span.cbp-biprev:before {
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5);
     display: block;
-    z-index: 1;
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -797,7 +802,7 @@ span.cbp-biprev:before {
 .footer-wrap .address .footer-add {
     position: relative;
     height: 24px;
-    left: 460px;
+    margin-left: 450px;
     bottom:20px;
     font-size: 24px;
 }
@@ -809,7 +814,7 @@ span.cbp-biprev:before {
 }
 .footer-wrap .address .footer-inform-add {
     position:relative;
-    left: 1000px;
+    margin-left: 962px;
     bottom: 50px;
     height: 50px;
     margin-top: -25px;
@@ -824,16 +829,23 @@ span.cbp-biprev:before {
     header {
         height: 100%;
     }
+    header .container {
+        width: 1280px;
+    }
     header h1 a {    
-        margin-left: 221px;
+        margin-left: 140px;
     }
     header .nav {
-        margin-right: -20px;
+        margin-left: 265px;
+        width: 100%;
     }
     header nav ul li {
         margin-left: 91.5px;
         margin-right: -97px;
         letter-spacing: -1;
+    }
+    .overlay {
+        width: 1280px;
     }
     .overlay .mobile {
         display: none;
@@ -842,7 +854,7 @@ span.cbp-biprev:before {
         display: none;
     }
     .overlay-content:first-child {
-        margin-left: 629px;
+        margin-left: 654px;
     }
     .overlay-content:nth-child(2) {
         margin-left: -27px;
@@ -896,7 +908,6 @@ span.cbp-biprev:before {
     .pject-wrap {
         width: 100%;
         height: 1911px;
-        z-index: 80;
         position: relative;
     }
     .pject-con-wrap {
@@ -969,7 +980,7 @@ span.cbp-biprev:before {
     .aniimg_small {
         display: block;
         margin-left: 373px;
-        margin-top: -50px;
+        margin-top: -150px;
     }
     .right {
         top: 44.2%;
@@ -1023,8 +1034,8 @@ span.cbp-biprev:before {
         width: 100%
     }
     .footer-wrap .address .footer-add {
-        margin-left: -157px;
         font-size: 18px;
+        margin-left: 290px;
     }
     .footer-wrap .address .footer-inform {
         margin-left: 83px;
@@ -1032,9 +1043,9 @@ span.cbp-biprev:before {
         letter-spacing: -1px;
     }
     .footer-wrap .address .footer-inform-add {
-        margin-left: -291px;
         text-rendering: optimizeSpeed;
         letter-spacing: -1px;
+        margin-left: 712px;
     }
 }
 
@@ -1048,6 +1059,10 @@ span.cbp-biprev:before {
         display: none; /* Chrome, Safari, Opera*/
     }
 /************** media query 1. Header mobile ****************/
+    header .container {
+        width: 768px;
+        z-index: 1000;
+    }
     header h1 a {    
         margin-left: 32px;
     }
@@ -1058,11 +1073,16 @@ span.cbp-biprev:before {
         display: none;
     }
     header .nav .btn {
-        margin-left: -50px;
+        margin-left: -355px;
+    }
+    .overlay {
+        width: 768px;
     }
     .overlay .mobile {
         display: block;
         margin-bottom: 10px;
+        width: 768px;
+        z-index: 1000;
     }
     .overlay .m-line {
         display: block;
@@ -1121,7 +1141,6 @@ span.cbp-biprev:before {
     .pject-wrap {
         width: 100%;
         height: 1911px;
-        z-index: 80;
         position: relative;
     }
     .pject-con-wrap {
@@ -1234,17 +1253,23 @@ span.cbp-biprev:before {
         height: 331px;
         background-color: #E9E9E9;
         margin-top: 230px;
+        width: 768px;
+    }
+    .footer-wrap {
+        width: 768px;
     }
     #footer .footer-logo {
         margin-left: -157px;
+        width: 768px;
     }
     .footer-wrap .address {
         letter-spacing: -0.8px;
         text-rendering: optimizeSpeed;
         height: 220px;
+        width: 768px;
     }
     .footer-wrap .address .footer-add {
-        margin-left: -157px;
+        margin-left: 290px;
         font-size: 18px;
     }
     .footer-wrap .address .footer-inform {
@@ -1252,8 +1277,378 @@ span.cbp-biprev:before {
         line-height: 1.7;
     }
     .footer-wrap .address .footer-inform-add {
-        margin-left: -918px;
+        margin-left: 83px;
         margin-top: 90px;
         line-height: 1.7;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 425px) {
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+    body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+/************** media query 1. Header mobile ****************/
+    header .container {
+        width: 425px;
+    }
+    header h1 a {    
+        margin-left: 10px;
+    }
+    header nav ul li {
+        padding: 0;
+    }
+    header .nav a {
+        display: none;
+    }
+    header .nav .btn {
+        margin-left: -300px;
+    }
+    .overlay {
+        width: 425px;
+    }
+    .overlay .mobile {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .overlay .m-line {
+        display: block;
+        padding: 0;
+        border-bottom: 1px solid #9E9E9E;
+        width: 425px;
+        margin-left: -20px;
+    }
+    .overlay-content {
+        letter-spacing: 0;
+    }
+    .overlay-content:first-child {
+        margin-left: 20px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: -335px;
+        margin-top: 15px;
+    }
+    .overlay-content:last-child {
+        margin-left: 240px;
+    }
+    .hd-1 {
+        margin-left: -100px;
+    }
+    .hd-1 p.sub-text {
+        font-size: 15px;
+    }
+    .cbp-bicontrols {
+        margin-left: 70px;
+        padding-top: 70px;
+    }
+
+/************** media query 2. news mobile ****************/
+    .news{
+        width: 425px;
+        margin: 0;
+        margin-bottom: -250px;
+        margin-top: 145px;
+    }
+    .news .title{
+        text-align: center;
+    }
+    .news .cont {
+        display: grid;
+        grid-template-columns: repeat(2, 183px);
+        grid-template-rows: 0.5fr 0.5fr;
+        justify-content: center;
+        gap: 10px 10px;
+    }
+    .news .cont .link a .img-wrap {
+        width: 180px;
+        height: 120px;
+        max-width: 180px;
+        max-height: 120px;
+    }
+    .news .cont .line1,
+    .news .cont .line2,
+    .news .cont .line3 {
+        display: none;
+    }
+    /************** media query 3. project mobile ****************/
+    .pject-wrap {
+        width: 100%;
+        height: 1500px;
+        z-index: 80;
+        position: relative;
+    }
+    .pject-con-wrap {
+        margin: 0 auto;
+        display: block;
+    }
+    .pject-text {
+        text-align: center;
+        margin-top: -950px;
+    }   
+    .pject-text h2 {
+        font-weight: bold;
+        font-size: 40px;
+        color: #1E1E1E;
+    }
+    .pject-text .pject-eng {
+        color: #C8C8C8;
+        padding-bottom: 50px;
+        font-weight: Medium;
+        font-size: 18px;
+    }
+    .pject-text .pject-con {
+        color: #1E1E1E;
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 2;
+        letter-spacing: -0.5;
+    }
+    .motion-pic-1 {
+        display: none;
+    }
+    .motion-pic-2 {
+        display: block;
+        margin-left: 0px;
+        width: 430px;
+        height: 374px;
+    }
+    .pject-ecoce-wrap {
+        margin-left: 0px;
+        top: 450px;
+        width: 430px;
+        height: 374px;
+    }
+    .pject-moado-wrap {
+        margin-left: 0px;
+        top: 450px;
+        width: 430px;
+        height: 374px;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        width: 320px;
+    }
+    body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+/************** media query 1. Header mobile ****************/
+    header h1 a {    
+        margin-left: 10px;
+    }
+    header nav ul li {
+        padding: 0;
+    }
+    header .nav a {
+        display: none;
+    }
+    header .nav .btn {
+        margin-left: -1260px;
+    }
+    .overlay {
+        width: 320px;
+        height: 180px;
+    }
+    .overlay .mobile {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .overlay .m-line {
+        display: block;
+        padding: 0;
+        border-bottom: 1px solid #9E9E9E;
+        width: 768px;
+        margin-left: -255px;
+    }
+    .overlay-content {
+        letter-spacing: 0;
+    }
+    .overlay-content a {
+        font-size: 12px;
+    }
+    .overlay-content:first-child {
+        margin-left: 10px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: -470px;
+        margin-top: 15px;
+    }
+    .overlay-content:last-child {
+        margin-left: 190px;
+        margin-top: -157px;
+    }
+    .hd-1 {
+        margin-left: -150px;
+        margin-top: -100px;
+    }
+    .hd-1 p.sub-text {
+        font-size: 15px;
+    }
+    .cbp-bicontrols {
+        margin-left: 10px;
+        padding-top: 40px;
+    }
+/************** media query 2. news mobile ****************/
+    .news{
+        width: 320px;
+        margin: 0;
+        margin-bottom: -400px;
+        margin-top: 145px;
+    }
+    .news .title{
+        text-align: center;
+    }
+    .news .title :first-child {
+        font-size: 25px;
+    }
+    .news .cont .link a :nth-child(2) {
+        font-size: 15px;
+    }
+    .news .cont .link a :nth-child(3) {
+        font-size: 12px;
+    }
+    .news .cont {
+        display: grid;
+        grid-template-columns: repeat(2, 143px);
+        grid-template-rows: 0.1fr 0.1fr;
+        justify-content: center;
+        gap: 5px 5px;
+        margin-left: 20px;
+    }
+    .news .cont .link a .img-wrap {
+        width: 120px;
+        height: 80px;
+        max-width: 120px;
+        max-height: 80px;
+    }
+    .news .cont .line1,
+    .news .cont .line2,
+    .news .cont .line3 {
+        display: none;
+    }
+    /************** media query 3. project mobile ****************/
+    .pject-wrap {
+        width: 100%;
+        height: 1150px;
+        z-index: 80;
+        position: relative;
+    }
+    .pject-con-wrap {
+        margin: 0 auto;
+        display: block;
+    }
+    .pject-text {
+        text-align: center;
+        margin-top: -770px;
+    }   
+    .pject-text h2 {
+        font-weight: bold;
+        font-size: 25px;
+        color: #1E1E1E;
+    }
+    .pject-text .pject-eng {
+        color: #C8C8C8;
+        padding-bottom: 50px;
+        font-weight: Medium;
+        font-size: 15px;
+    }
+    .pject-text .pject-con {
+        color: #1E1E1E;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 2;
+        letter-spacing: -0.5;
+    }
+    .motion-pic-1 {
+        display: none;
+    }
+    .motion-pic-2 {
+        display: block;
+        margin-left: 0px;
+        width: 310px;
+        height: 270px;
+    }
+    .pject-ecoce-wrap {
+        margin-left: 5px;
+        top: 320px;
+        width: 310px;
+        height: 270px;
+    }
+    .pject-moado-wrap {
+        margin-left: 5px;
+        top: 300px;
+        width: 310px;
+        height: 270px;
+    }
+    .pject-ecoce-wrap figcaption:hover {
+        padding: 200px 0 0 21px;
+        font-size: 15px;
+    }
+    .pject-moado-wrap figcaption:hover {
+        padding: 220px 0 0 21px;
+        font-size: 15px;
+    }
+/************** media query 4. service mobile ****************/
+    .service {
+        height: 1853px;
+        background-color: #F2F6FC;
+        margin-top: -100px;
+        padding-top: 50px;
+    }
+    .service .left .title :nth-child(1) {
+        margin-left: 124px;
+        font-size: 25px;
+    }
+    .service .left .title :nth-child(2) {
+        margin-left: 134px;
+        font-size: 15px;
+    }
+    .service .left .title :nth-child(3) {
+        margin-left: 0px;
+        text-rendering: optimizeSpeed;
+        letter-spacing: -1.8px;
+        font-size: 16px;
+        width: 320px;
+        text-align: center;
+    }
+    .aniimg {
+        display: none;
+    }
+    .aniimg_small {
+        display: block;
+        margin-left: 117px;
+        margin-top: -60px;
+    }
+    .right {
+        top: 44.2%;
+        left: -78.3%;
+        margin-left: -96px;
+    }
+    .web {
+        position: absolute;
+        left: 355px;
+    }
+    .xr {
+        position: absolute;
+        left: 355px;
     }
 }
