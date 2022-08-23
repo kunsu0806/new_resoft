@@ -14,13 +14,7 @@
     <!-- Aos animation -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
-    <script>
-        window.onload = function(){
-            setDraggable(false)
-            setZoomable(false)
-        }
-    </script>
-
+    
 </head>
 
 <body>
@@ -29,16 +23,16 @@
         <div class="overlay-content">
             <a class="mobile" href="company.html">회사소개</a>
             <a class="m-line"href=""></a>
-            <a href="company.html#introduce-resoft">REsoft소개</a>
+            <a href="company.html#introduce-resoft-target">REsoft소개</a>
             <a href="company.html#history">연혁</a>
-            <a href="company.html#Organization-chart">조직도</a>
+            <a href="company.html#Organization-chart-target">조직도</a>
             <a href="company.html#certification">특허&인증</a>
             <a href="company.html#directions">오시는 길</a>
         </div>
         <div class="overlay-content">
             <a class="mobile" href="business.html">사업현황</a>
-            <a href="business.html#ecoce">ECOCE</a>
-            <a href="business.html#moado">moaDo</a>
+            <a href="business.html#ecoce-target">ECOCE</a>
+            <a href="business.html#moado-target">moaDo</a>
             <a href="business.html#remainder">Etc</a>
         </div>
         <div class="overlay-content">
@@ -68,9 +62,9 @@
 <!----------------------- Nav Bar ------------------------->
             <ul>
                 <li class="nav">
-                    <a href="company.html" class="nav-item" active-color="#78EAFF">회사소개</a>
-                    <a href="business.html" class="nav-item is-active" active-color="#78EAFF">사업현황</a>
-                    <a href="information.html" class="nav-item" active-color="#78EAFF">정보마당</a>
+                    <a href="company.html" class="nav-item" active-color="rgb(47, 88, 163)">회사소개</a>
+                    <a href="business.html" class="nav-item is-active" active-color="rgb(47, 88, 163)">사업현황</a>
+                    <a href="information.html" class="nav-item" active-color="rgb(47, 88, 163)">정보마당</a>
                     <span class="nav-indicator"></span>
                 </li>
                 <script src="./js/header5.js"></script>
@@ -85,22 +79,10 @@
         <div id="business-header">
             <h1>사업현황</h1>
         </div>
-<!-------------------------------- header scroll -------------------------------->
-        <script>
-            $(document).ready(function(){       
-                var scroll_pos = 0;
-                $(document).scroll(function() { 
-                    scroll_pos = $(this).scrollTop();
-                    if(scroll_pos > 80) {
-                        $(".container").css('background-color', 'rgba(47, 88, 163, 0.9)');
-                    } else {
-                        $(".container").css('background-color', 'transparent');
-                    }
-                });
-            });
-        </script>
+
     </header>
 <!------------------------------- ecoce ----------------------------------->
+    <section id="ecoce-target"></section>
     <section id="ecoce">
         <div class="ecose_7">
             <h2 class="title_1">에코스</h2>
@@ -129,7 +111,8 @@
             </div>
         </div>
         </section>
-<!----------------------------------- moado ------------------------------------>        
+<!----------------------------------- moado ------------------------------------>
+    <section id="moado-target"></section>            
     <section id = "moado">
         <div class="bkg-left">
             <div class="bkg-right">

@@ -11,10 +11,6 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- underline-animation-->
-    <script src="./js/underline-animation3.js"></script>
-    <!-- information button -->
-    <script src="./js/load.js"></script>
     
 </head>
 
@@ -24,16 +20,16 @@
         <div class="overlay-content">
             <a class="mobile" href="company.html">회사소개</a>
             <a class="m-line"href=""></a>
-            <a href="company.html#introduce-resoft">REsoft소개</a>
+            <a href="company.html#introduce-resoft-target">REsoft소개</a>
             <a href="company.html#history">연혁</a>
-            <a href="company.html#Organization-chart">조직도</a>
+            <a href="company.html#Organization-chart-target">조직도</a>
             <a href="company.html#certification">특허&인증</a>
             <a href="company.html#directions">오시는 길</a>
         </div>
         <div class="overlay-content">
             <a class="mobile" href="business.html">사업현황</a>
-            <a href="business.html#ecoce">ECOCE</a>
-            <a href="business.html#moado">moaDo</a>
+            <a href="business.html#ecoce-target">ECOCE</a>
+            <a href="business.html#moado-target">moaDo</a>
             <a href="business.html#remainder">Etc</a>
         </div>
         <div class="overlay-content">
@@ -63,9 +59,9 @@
 <!----------------------- Nav Bar ------------------------->
             <ul>
                 <li class="nav">
-                    <a href="company.html" class="nav-item" active-color="#78EAFF">회사소개</a>
-                    <a href="business.html" class="nav-item" active-color="#78EAFF">사업현황</a>
-                    <a href="information.html" class="nav-item is-active" active-color="#78EAFF">정보마당</a>
+                    <a href="company.html" class="nav-item" active-color="rgb(47, 88, 163)">회사소개</a>
+                    <a href="business.html" class="nav-item" active-color="rgb(47, 88, 163)">사업현황</a>
+                    <a href="information.html" class="nav-item is-active" active-color="rgb(47, 88, 163)">정보마당</a>
                     <span class="nav-indicator"></span>
                 </li>
                 <script src="./js/header5.js"></script>
@@ -81,20 +77,7 @@
         <div id="information-header">
             <h1>정보마당</h1>
         </div>
-<!-------------------------------- header scroll -------------------------------->
-        <script>
-            $(document).ready(function(){       
-                var scroll_pos = 0;
-                $(document).scroll(function() { 
-                    scroll_pos = $(this).scrollTop();
-                    if(scroll_pos > 80) {
-                        $(".container").css('background-color', 'rgba(47, 88, 163, 0.9)');
-                    } else {
-                        $(".container").css('background-color', 'transparent');
-                    }
-                });
-            });
-        </script>
+
     </header>
 
 <!------------------------ information ----------------------------->
@@ -105,7 +88,7 @@
         </div>
         <div class="cont">
             <div class="card">
-                <a href="information-article1.html">
+                <a href="information-article.html">
                     <div class="img-box"><img src="./img/1.webp" alt=""></div>
                     <div class="text-box">
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
@@ -114,7 +97,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="information-article2.html">
+                <a href="information-article.html">
                     <div class="img-box"><img src="./img/2.webp" alt=""></div>
                     <div class="text-box">
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
@@ -123,7 +106,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="information-article3.html">
+                <a href="information-article.html">
                     <div class="img-box"><img src="./img/3.webp" alt=""></div>
                     <div class="text-box">
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
@@ -132,7 +115,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="information-article4.html">
+                <a href="information-article.html">
                     <div class="img-box"><img src="./img/4.webp" alt=""></div>
                     <div class="text-box">
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
@@ -141,7 +124,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="information-article5.html">
+                <a href="information-article.html">
                     <div class="img-box"><img src="./img/5.webp" alt=""></div>
                     <div class="text-box">
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
@@ -150,7 +133,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="information-article6.html">
+                <a href="information-article.html">
                     <div class="img-box"><img src="./img/6.webp" alt=""></div>
                     <div class="text-box">
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
@@ -159,7 +142,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="">
+                <a href="information-article.html">
                     <div class="img-box"><img src="./img/7.webp" alt=""></div>
                     <div class="text-box">
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
@@ -168,7 +151,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="">
+                <a href="information-article.html">
                     <div class="img-box"><img src="./img/8.webp" alt=""></div>
                     <div class="text-box">
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
@@ -177,7 +160,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="">
+                <a href="information-article.html">
                     <div class="img-box"><img src="./img/9.webp" alt=""></div>
                     <div class="text-box">
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>
@@ -186,7 +169,7 @@
                 </a>
             </div>
             <div class="card">
-                <a href="">
+                <a href="information-article.html">
                     <div class="img-box"><img src="./img/10.webp" alt=""></div>
                     <div class="text-box">
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing ...</p>

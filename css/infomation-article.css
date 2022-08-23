@@ -53,6 +53,7 @@ header .container{
     position: fixed;
     top: 0;
     z-index: 1000;
+    background-color: white;
 }
 
 header ul {
@@ -174,10 +175,10 @@ header h1 a img {
     line-height: 0.7;
 }
 .overlay-content:first-child {
-    margin-left: 1139px;
+    margin-left: 1156px;
 }
 .overlay-content:nth-child(2) {
-    margin-left: -17px;
+    margin-left: -16px;
 }
 .overlay-content:last-child {
     margin-left: 14px;
@@ -218,7 +219,7 @@ header h1 a img {
     margin-left: 240px;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color:black;
 	font-size:19px;
 	font-weight:bold;
 }
@@ -231,10 +232,17 @@ header h1 a img {
     margin-left: 20px;
     font-size: 16px;
 }
-.news .left-button:hover p{
+.news .left-button:hover p {
     color: #476e9e;
 }
-.news .infomation-title .title-p{
+.left-button a :nth-child(2){
+    position: absolute;
+    display: none;
+}
+.news .left-button:hover a :nth-child(2) {
+    display: block;
+}
+.news .infomation-title .title-p {
     text-align: left;
     font-size:  40px;
     font-weight: bold;
@@ -242,25 +250,26 @@ header h1 a img {
     height: 58px;
 }
 
-.news .infomation-title .title-p2{
+.news .infomation-title .title-p2 {
     width: 51px;
     height: 26px;
     font-size: 18px;
     color:#C8C8C8;
+    margin-left: 80px;    
 }
 
-.news .news-container{
+.news .news-container {
     margin-left: 620px;
     margin-top: -40px;
 }
 
-.news .news-title{
+.news .news-title {
     border-bottom: 2px solid #184B9F;
     width:1060px;
     padding-bottom: 30px;
 }
 
-.news .news-title p{
+.news .news-title p {
     width: 1040px;
     height: 35px;
     text-align: left;
@@ -271,7 +280,7 @@ header h1 a img {
     line-height: 0.8;
 }
 
-.news .news-title span{
+.news .news-title span {
     width: 680px;
     height: 24px;
     text-align: left;
@@ -280,10 +289,10 @@ header h1 a img {
     color: #AAAAAA;
     opacity: 1;
 }
-.news .news-imgbox{
+.news .news-imgbox {
     margin-bottom: 50px;
 }
-.news .news-imgbox .news-img img{
+.news .news-imgbox .news-img img {
     margin-top:30px;
     width: 1060px;
     height: 561px;
@@ -293,49 +302,83 @@ header h1 a img {
 }
 
 .news .news-text {
-    width: 1041px;
+    width: 1040px;
     text-align: left;
     font-family:  Noto Sans KR sans-serif;
     font-size:14px;
     letter-spacing: 0.8px;
     color: #000000;
     opacity: 1;
-    border-bottom: 2px solid #184B9F;
     padding-bottom: 30px;
 }
 
 /* 이전글 다음글 버튼 */
 
-.news .text-button .bot-button,.bot-button2{
-    box-shadow: 0px 0px 0px 2px #9fb4f2;
-	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
-	background-color:#7892c2;
-	border-radius:11px;
-	border:2px solid #4e6096;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:14px;
-	font-weight:bold;
-	padding:12px 30px;
-	text-decoration:none;
-	text-shadow:0px 0px 0px #283966;
-    margin-top: 30px;
+.text-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-top: 30px;
+    border-top: 2px solid #184B9F;
+    margin-bottom: 170px;
+}
+.bot-button, .bot-button2 {
+    display: flex;
+}
+
+.bot-button:hover .bot-btn-p, .bot-button2:hover .bot-btn-p2 {
+    color: #184b9f;
+    font-weight: bold;
+}
+
+.bot-button:hover .bot-button-left, .bot-button2:hover .bot-button-right {
+    background-color: #184b9f;
+    border-color: #184b9f;
+}
+/* 반전 */
+.bot-button:hover .bot-button-left img {
+    filter: invert(100%);
+}
+
+.next-right-button {
+    display: flex;
+}
+
+.bot-button2:hover .bot-button-right img {
+    filter: invert(100%);
+}
+
+.bot-button-left {
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    border: 1px solid black;
+    padding-top: 6px;
+    margin-top: -11px;
+    margin-right: 20px;
+}
+
+.bot-button-left img, .bot-button-right img {  
+    margin: 24%; 
+    width: 50%;
+}
+
+.bot-button-right {
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    border: 1px solid black;
+    padding-top: 6px;
+    margin-top: -10px;
+    margin-left: 20px;
+}
+
+.text-button .bot-button .bot-btn-p a {
     text-decoration: none;
-    margin-bottom: 200px;
 }
 
-.news .text-button .bot-button2{
-    margin-left:780px;
-}
-
-.news .text-button .bot-button:hover{
-	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
-	background-color:#476e9e;
-}
-.news .text-button .bot-button2:hover {
-	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
-	background-color:#476e9e;
+.text-button .bot-button2 a {
+    text-decoration: none;
 }
 
 /***************** footer ********************/
@@ -363,7 +406,7 @@ header h1 a img {
 .footer-wrap .address .footer-add {
     position: relative;
     height: 24px;
-    left: 460px;
+    margin-left: 450px;
     bottom:20px;
     font-size: 24px;
 }
@@ -375,7 +418,7 @@ header h1 a img {
 }
 .footer-wrap .address .footer-inform-add {
     position:relative;
-    left: 1000px;
+    margin-left: 962px;
     bottom: 50px;
     height: 50px;
     margin-top: -25px;
@@ -384,6 +427,9 @@ header h1 a img {
 /************** media query 1. Header tablet ****************/
 @media (min-width: 769px) and (max-width: 1280px) {
     /******* header *******/
+    header {
+        width: 100%;
+    }
     header h1 a {    
         margin-left: 231.07px;
     }
@@ -392,6 +438,10 @@ header h1 a img {
     }
     header .nav {
         letter-spacing: -2;
+        margin-left: 0px;
+    }
+    header .container {
+        width: 1280px;
     }
     #information-header {
         width: 1280px;
@@ -400,8 +450,11 @@ header h1 a img {
     #information-header h1 {
         font-size: 40px;
     }
+    .overlay {
+        width: 1280px;
+    }
     .overlay-content:first-child {
-        margin-left: 598px;
+        margin-left: 631px;
     }
     .overlay-content:nth-child(2) {
         margin-left: -16px;
@@ -429,7 +482,7 @@ header h1 a img {
         margin-left: 300px;
     }
     .infomation-title .title-p2 {
-        margin-left: 375px;
+        padding-left: 300px;
     }
     .news .left-button {
         position: absolute;
@@ -451,7 +504,7 @@ header h1 a img {
         width: 100%
     }
     .footer-wrap .address .footer-add {
-        margin-left: -157px;
+        margin-left: 300px;
         font-size: 18px;
     }
     .footer-wrap .address .footer-inform {
@@ -460,7 +513,7 @@ header h1 a img {
         letter-spacing: -1px;
     }
     .footer-wrap .address .footer-inform-add {
-        margin-left: -291px;
+        margin-left: 727px;
         text-rendering: optimizeSpeed;
         letter-spacing: -1px;
     }
@@ -479,6 +532,9 @@ header h1 a img {
     }
     /******* header *******/
     header {
+        width: 100%;
+    }
+    header .container {
         width: 768px;
     }
     header h1 a {    
@@ -488,11 +544,13 @@ header h1 a img {
         display: none;
     }
     header ul {
-        left: 458px;
+        margin-left: 528px;
+        margin-top: -40px;
     }
     .overlay {
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
+        width: 768px;
     }
     .overlay::-webkit-scrollbar {
         display: none; /* Chrome, Safari, Opera*/
@@ -510,6 +568,10 @@ header h1 a img {
     }
     .overlay-content {
         letter-spacing: 0;
+        width: 200px;
+    }
+    .overlay-content a {
+        width: 130px;
     }
     .overlay-content:first-child {
         margin-left: 275px;
@@ -535,13 +597,13 @@ header h1 a img {
     .infomation-title .title-p {
         margin-left: 50px;
     }
-    .infomation-title .title-p2 {
+    .news .infomation-title .title-p2 {
         margin-left: 130px;
     }
     .news .left-button {
         position: absolute;
         bottom: 4.5%;
-        left: 13%;
+        left: 10%;
     }
     .news .news-container {
         margin-left: 24px;
@@ -549,6 +611,9 @@ header h1 a img {
     }
     .news .news-title {
         padding-bottom: 10px;
+        width: 706px;
+    }
+    .news .news-title p {
         width: 706px;
     }
     .news .news-imgbox {
@@ -561,30 +626,40 @@ header h1 a img {
         width: 706px;
     }
     .news .news-container .bot-button {
-        width: 120px;
+        width: 200px;
         font-size: 12px;
+        position: absolute;
+        bottom: 80px;
+        left: 5%;
     }
     .news .news-container .bot-button2 {
-        width: 120px;
         font-size: 12px;
-        margin-left: 460px;
-        padding: 12px;
+        left: 78%;
+        position: absolute;
+        bottom: 80px;
+        padding-right: 0;
         padding-left: 30px;
     }
 
 /************** media query 3.footer mobile ****************/
     #footer {
+        width: 100%;
         height: 341px;
         background-color: #E9E9E9;
     }
+    .footer-wrap {
+        width: 768px;
+    }
     #footer .footer-logo {
         margin-left: -157px;
+        width: 768px;
     }
     .footer-wrap .address {
         letter-spacing: -0.8;
+        width: 768px;
     }
     .footer-wrap .address .footer-add {
-        margin-left: -157px;
+        margin-left: 300px;
         font-size: 18px;
     }
     .footer-wrap .address .footer-inform {
@@ -592,8 +667,192 @@ header h1 a img {
         line-height: 1.7;
     }
     .footer-wrap .address .footer-inform-add {
-        margin-left: -918px;
+        margin-left: 82px;
         margin-top: 90px;
         line-height: 1.7;
+    }
+}
+
+
+ @media screen and (max-width: 425px){
+/******* header *******/
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        width: 100%;
+    }
+    body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    /******* header *******/
+    header {
+        width: 100%;
+    }
+    header .container {
+        width: 425px;
+    }
+    header h1 a {    
+        margin-left: 20px;
+    }
+    header .nav a {
+        display: none;
+    }
+    header ul {
+        margin-left: 220px;
+        margin-top: -40px;
+    }
+    .overlay {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        width: 425px;
+    }
+    .overlay::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    .overlay .mobile {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .overlay .m-line {
+        display: block;
+        padding: 0;
+        border-bottom: 1px solid #9E9E9E;
+        width: 425px;
+        margin-left: -15px;
+    }
+    .overlay-content {
+        letter-spacing: 0;
+        width: 200px;
+    }
+    .overlay-content a {
+        width: 130px;
+        font-size: 15px;
+    }
+    .overlay-content:first-child {
+        margin-left: 15px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: 160px;
+        margin-top: -170px;
+    }
+    .overlay-content:last-child {
+        margin-left: 290px;
+        margin-top: -170px;
+    }
+/************** media query 2.news mobile ****************/
+    .news{
+        width:100%;
+        max-width:425px;
+        margin-left:-20px;
+        height: auto;
+    }
+    .news .news-title{
+        width:420px;
+    }
+    .news .news-container {
+        width:425px;
+    }
+    .news .news-container .news-text {
+        width: 420px;
+    }
+    .news .infomation-title .title-p {
+        font-size:20px;
+        margin-left: -70px;
+    }
+    .news .infomation-title .title-p2 {
+        margin-left: -40px;
+        margin-top: -30px;
+        font-size: 15px;
+    }
+    .news-container .news-title p{
+        font-size: 15px;
+        width: 425px;
+    }
+    .news-container .news-title span{
+        font-size: 14px;
+    }
+    .news-container .news-imgbox{
+        width:425px;
+    }
+    .news .news-container .news-text {
+        margin-bottom: -50px;
+    }
+    .news-container .news-imgbox .news-img img{
+        width: 417px;
+        height:350px;
+    }
+    .news-container .news-text p {
+        font-size:12px;
+        width: 425px;
+    }
+    .text-button {
+        width: 425px;
+        margin-left: -5px;
+    }
+    .text-button .bot-button-left{
+        width:30px;
+        height:30px;
+    }    
+    .news .left-button {
+        bottom: 8%;
+        margin-left: 130px;
+    }
+    .news .news-container .bot-button {
+        bottom: 8%;
+        left: 10%;
+    }
+    .news .news-container .bot-button2 {
+        bottom: 8%;
+        left: 72%;
+    }
+    .text-button .bot-button2 img{
+        margin-right:-200px;
+    }
+    .text-button .bot-button-right{
+        width:30px;
+        height:30px;
+    }
+    .news .left-button img{
+        width:30px;
+    }
+    
+/************** media query 3.footer mobile ****************/
+    #footer {
+        height: 331px;
+        background-color: #E9E9E9;
+        width: 425px;
+    }
+    .footer-wrap {
+        width: 425px;
+    }
+    .footer-wrap img {
+        width: 150px;
+        height: 33.75px;
+    }
+    #footer .footer-logo {
+        margin-left: -208px;
+        width: 425px;
+    }
+    .footer-wrap .address {
+        letter-spacing: -0.8px;
+        text-rendering: optimizeSpeed;
+        height: 220px;
+        width: 425px;
+    }
+    .footer-wrap .address .footer-add {
+        margin-left: 190px;
+        font-size: 13px;
+    }
+    .footer-wrap .address .footer-inform {
+        margin-left: 32px;
+        line-height: 1.7;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .footer-wrap .address .footer-inform-add {
+        margin-left: 32px;
+        line-height: 1.7;
+        font-size: 13px;
+        margin-top: 100px;
     }
 }

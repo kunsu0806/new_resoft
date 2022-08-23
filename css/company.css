@@ -47,12 +47,13 @@ header .container {
     display: flex;
     justify-content: space-between; /* 양 끝으로 배치 */
     align-items: center;
-    width: 100%;
+    width: 1920px;
     border: 1px solid #DBDBDB;
     height: 80px;
     position: fixed;
     top:0;
     z-index: 1000;
+    background-color: white;
 }
 
 header ul {
@@ -153,7 +154,7 @@ header h1 a img {
 /************************** Hidden **************************/
 .overlay {
     height: 210px;
-    width: 100%;
+    width: 1920px;
     z-index: 1000;
     top: 80px;
     left: 0;
@@ -171,10 +172,10 @@ header h1 a img {
     line-height: 0.7;
 }
 .overlay-content:first-child {
-    margin-left: 1139px;
+    margin-left: 1156px;
 }
 .overlay-content:nth-child(2) {
-    margin-left: -17px;
+    margin-left: -16px;
 }
 .overlay-content:last-child {
     margin-left: 14px;
@@ -705,7 +706,7 @@ header h1 a img {
 .footer-wrap .address .footer-add {
     position: relative;
     height: 24px;
-    left: 460px;
+    margin-left: 450px;
     bottom:20px;
     font-size: 24px;
 }
@@ -717,7 +718,7 @@ header h1 a img {
 }
 .footer-wrap .address .footer-inform-add {
     position:relative;
-    left: 1000px;
+    margin-left: 962px;
     bottom: 50px;
     height: 50px;
     margin-top: -25px;
@@ -726,6 +727,9 @@ header h1 a img {
 /************** media query 1. Header tablet ****************/
 @media (min-width: 769px) and (max-width: 1280px) {
     /******* header *******/
+    header {
+        width: 100%;
+    }
     header h1 a {    
         margin-left: 231.07px;
     }
@@ -734,16 +738,23 @@ header h1 a img {
     }
     header .nav {
         letter-spacing: -2;
+        margin-left: 0px;
+    }
+    header .container {
+        width: 100%;
+    }
+    .overlay {
+        width: 100%;
     }
     #company-header {
-        width: 1280px;
+        width: 100%;
         height: 300px;
     }
     #company-header h1 {
         font-size: 40px;
     }
     .overlay-content:first-child {
-        margin-left: 598px;
+        margin-left: 631px;
     }
     .overlay-content:nth-child(2) {
         margin-left: -16px;
@@ -760,6 +771,9 @@ header h1 a img {
     }
 
 /************** media query 2. Intoroduce tablet ****************/
+    #introduce-resoft {
+        width: 100%;
+    }
     .introduce-title {
         margin-left: 140px;
     }
@@ -768,6 +782,9 @@ header h1 a img {
         width: 1000px;
     }
 /************** media query 3. History tablet ****************/
+    #history {
+        width: 100%;
+    }
     .history-title p {
         margin-left: 140px;
     }
@@ -786,6 +803,7 @@ header h1 a img {
     }
 /************** media query 4. Organization tablet ****************/
     #Organization-chart {
+        width: 100%;
         height: 1500px;
         margin-bottom: 100px;
     }
@@ -834,6 +852,9 @@ header h1 a img {
     }
 
 /************** media query 5. CERTIFICATION & PATENT tablet ****************/
+    #certification {
+        width: 100%;
+    }
     #certification .cert_text .cert_p1 {
         margin-left: 140px;
     }
@@ -872,14 +893,14 @@ header h1 a img {
     
 /************** media query 4. footer tablet ****************/
     .footer-wrap {
-        width: 1280px;
+        width: 100%;
     }
     #footer .footer-logo {
         margin-left: -157px;
         width: 100%
     }
     .footer-wrap .address .footer-add {
-        margin-left: -157px;
+        margin-left: 300px;
         font-size: 18px;
     }
     .footer-wrap .address .footer-inform {
@@ -888,7 +909,7 @@ header h1 a img {
         letter-spacing: -1px;
     }
     .footer-wrap .address .footer-inform-add {
-        margin-left: -291px;
+        margin-left: 777px;
         text-rendering: optimizeSpeed;
         letter-spacing: -1px;
     }
@@ -906,6 +927,9 @@ header h1 a img {
     }
 /************** media query 1.header mobile ****************/
     header {
+        width: 100%;
+    }
+    header .container {
         width: 768px;
     }
     header h1 a {    
@@ -915,11 +939,13 @@ header h1 a img {
         display: none;
     }
     header ul {
-        left: 458px;
+        margin-left: 528px;
+        margin-top: -40px;
     }
     .overlay {
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
+        width: 768px;
     }
     .overlay::-webkit-scrollbar {
         display: none; /* Chrome, Safari, Opera*/
@@ -937,6 +963,10 @@ header h1 a img {
     }
     .overlay-content {
         letter-spacing: 0;
+        width: 200px;
+    }
+    .overlay-content a {
+        width: 130px;
     }
     .overlay-content:first-child {
         margin-left: 275px;
@@ -954,6 +984,9 @@ header h1 a img {
     }
 
 /************** media query 2.introduce mobile ****************/
+    #introduce-resoft {
+        width: 100%;
+    }
     .introduce-title .title-m {
         margin-left: 60px;
     }
@@ -967,6 +1000,7 @@ header h1 a img {
 /************** media query 3.History mobile ****************/
     #history {
         height: 1494px;
+        width: 100%;
     }
     .history-title p {
         margin-left: 340px;
@@ -1015,7 +1049,7 @@ header h1 a img {
 
 /************** media query 4. Organization mobile ****************/
     #Organization-chart {
-        width: 768px;
+        width: 100%;
         height: 1450px;        
     }
     .Organization-title p {
@@ -1067,7 +1101,7 @@ header h1 a img {
 /************** media query 5. CERTIFICATION & PATENT mobile ****************/
     #certification {
         width: 768px;
-        height: 1105px;
+        height: 1155px;
         margin-top: -10px;
     }
     #certification .cert_text .cert_p1 {
@@ -1078,18 +1112,22 @@ header h1 a img {
     }
 /********************** 특허 이미지 박스 ***********************/
     .cert_container{
-        width: 100%;
+        width: 768px;
         height: 1110px;
-        margin-left: 400px;
+        margin-left: 0px;
     }
     .cert_li {
-        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% / 3);
+        margin-bottom: 80px;
     }
 /********************** 특허 이미지 **************************/
     .cert_image_box {
         width: 170px;
         height: 230px;
-        margin-right: 800px;
+        margin-right: 0px;
     }
     .cert_img {
         width: 160px;
@@ -1100,27 +1138,28 @@ header h1 a img {
     #directions {
         width: 100%;
         height: 1144px;
+        margin: -50px 0 50px 0;
     }
     .direction-title p {
-        margin-left: 70px;
+        margin-left: 300px;
     }
     .direction-title span {
-        margin-left: 100px;
+        margin-left: 330px;
     }
     #map {
         width: 704px;
         height: 680px;
-        margin-left: -210px;
+        margin-left: 35px;
     }
     #directions .cont .info {
         width: 704px;
-        margin-left: -210px;
+        margin-left: 35px;
     }
     #directions .cont .info .tel {
         margin-left: -180px;
     }
     #directions .cont .info .add {
-        margin-left: -190px;
+        margin-left: -180px;
     }
     #directions .cont .info .line {
         width: 704px;
@@ -1128,17 +1167,23 @@ header h1 a img {
 
 /************** media query 4.footer mobile ****************/
     #footer {
+        width: 100%;
         height: 341px;
         background-color: #E9E9E9;
     }
+    .footer-wrap {
+        width: 768px;
+    }
     #footer .footer-logo {
         margin-left: -157px;
+        width: 768px;
     }
     .footer-wrap .address {
         letter-spacing: -0.8;
+        width: 768px;
     }
     .footer-wrap .address .footer-add {
-        margin-left: -157px;
+        margin-left: 300px;
         font-size: 18px;
     }
     .footer-wrap .address .footer-inform {
@@ -1146,8 +1191,357 @@ header h1 a img {
         line-height: 1.7;
     }
     .footer-wrap .address .footer-inform-add {
-        margin-left: -918px;
+        margin-left: 82px;
         margin-top: 90px;
         line-height: 1.7;
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        width: 100%;
+    }
+    body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+/******* header *******/
+    header {
+        width: 100%;
+    }
+    header .container {
+        width: 425px;
+    }
+    header h1 a {    
+        margin-left: 20px;
+    }
+    header .nav a {
+        display: none;
+    }
+    header ul {
+        margin-left: 220px;
+        margin-top: -40px;
+    }
+    .overlay {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        width: 425px;
+    }
+    .overlay::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    .overlay .mobile {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .overlay .m-line {
+        display: block;
+        padding: 0;
+        border-bottom: 1px solid #9E9E9E;
+        width: 425px;
+        margin-left: -15px;
+    }
+    .overlay-content {
+        letter-spacing: 0;
+        width: 200px;
+    }
+    .overlay-content a {
+        width: 130px;
+        font-size: 15px;
+    }
+    .overlay-content:first-child {
+        margin-left: 15px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: 160px;
+        margin-top: -170px;
+    }
+    .overlay-content:last-child {
+        margin-left: 290px;
+        margin-top: -170px;
+    }
+/************** media query 2.introduce mobile ****************/
+    #introduce-resoft {
+        width: 100%;
+        height: 630px;
+    }
+    .introduce-title {
+        margin-top: 50px;
+        margin-left: 145px;
+    }
+    .introduce-title .title-m {
+        margin-left: unset;
+        font: bold 30px/35px Noto Sans KR;
+    }
+    .introduce-title .title-sub {
+        margin-left: 40px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .info-container {
+        margin-left: unset;
+        width: 425px;
+        margin-top: 10px;
+        margin-bottom: unset;
+    }
+    .info-p{
+        font: bold 20px/32px Noto Sans KR;
+    }
+    .info-p p{
+        margin-left: 15px;
+    }
+    .info-p2 {
+        font: normal 15px/25px Noto Sans KR;
+    }
+    .info-p2 p{
+        margin-left: 150px;
+    }
+/************** media query 3.History mobile ****************/
+    #history {
+        height: 1294px;
+        width: 100%;
+    }
+    .history-title p {
+        margin-left: 185px;
+        padding-top: 50px;
+        font-size: 30px;
+    }
+    .history-title span {
+        margin-left: 193px;
+        font-size: 15px;
+    }
+    .history-ul {
+        margin-left: unset;
+        width: 425px;
+        margin-top: 50px;
+    }
+    .history-ul h1 {
+        font-size: 30px;
+    }
+/******** 세로 라인 위치 *********/
+    .history-ul::before {
+        left: 33%;
+        margin-left: -2px;
+        padding: 20px 0;
+        height: 94%;
+        margin-top: 30px;
+    }
+/************ 세로라인 동그라미 만들기 ************/
+    .history-ul li h4::before {
+        content:""; 
+        position: absolute;
+        left: 30.9%; 
+        transform: translateY(60%);
+        border-radius: 100%;
+        background:#fff; 
+        border: 10px solid #184B9F;
+        box-sizing: border-box;
+    }    
+/************* 1,12,11,10,9,8,5 **************/
+    .history-ul li h4 {
+        text-align: right;
+        margin-right: 310px;
+        font-size: 30px;
+    }
+    .history-ul li p {
+        display: none;
+        font-size: 14px;
+    }
+    .history-ul .mobile-h-p {
+        display: block;
+        line-height: 1.5;
+        margin-bottom: 55px;
+        margin-top: -20px;
+        margin-left: 15px;
+    }
+
+/************** media query 4. Organization mobile ****************/
+    #Organization-chart {
+        width: 100%;
+        height: 1300px;        
+    }
+    .Organization-title p {
+        top: unset;
+        margin-bottom: unset;
+        padding-top: unset;
+        margin-top: 50px;
+        margin-left: 170px;
+        font-size: 30px;
+    }
+    .Organization-title span {
+        margin-left: 160px;
+        font-size: 15px;
+    }
+    .Org-tree {
+        width: 425px;
+        height: 1156px;
+        margin-left: unset;
+    }
+    .level-2-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0px;
+    }
+/***** LEVEL-1 중앙 세로선 *****/
+    .level-1::before {
+        height: 70px;
+    }
+/***** LEVEL-2 가로선 & 위치 *****/
+    .level-2-wrapper::before {
+        left: 21%;
+        width: 215px;
+    }
+    .level-2-wrapper li {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .level-2-wrapper > li::before{
+        left: 42%;
+    }
+    .level-2-wrapper > li.tab-345::before {
+        height: 0;
+    }
+    .Org-tree .department3,
+    .Org-tree .department4,
+    .Org-tree .department5
+    {
+        margin-top: -100px;
+    }
+    .level-3-desc {
+        margin-left: 0px;
+        font-size: 20px;
+        line-height: 1.8;
+        font-weight: bold;
+    }
+
+/************** media query 5. CERTIFICATION & PATENT mobile ****************/
+    #certification {
+        width: 425px;
+        height: 1000px;
+        margin-top: -10px;
+    }
+    #certification .cert_text .cert_p1 {
+        padding-top: 50px;
+        margin-left: 140px;
+        font-size: 30px;
+    }
+    #certification .cert_text span{
+        margin-left: 130px;
+        font-size: 15px;
+    }
+/********************** 특허 이미지 박스 ***********************/
+    .cert_container{
+        width: 425px;
+        margin-left: 0px;
+    }
+    .cert_li {
+        margin-bottom: 20px;
+    }
+    .cert_li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc(100% / 2);
+        margin-bottom: 20px;
+    }
+    .cert_ul :nth-child(7),
+    .cert_ul :nth-child(8),
+    .cert_ul :nth-child(9){
+        display: none;
+    }
+    /********************** 특허 이미지 **************************/
+    .cert_image_box {
+        width: 150px;
+        height: 230px;
+    }
+    .cert_img {
+        width: 140px;
+        height: 220px;
+    }
+
+/************** media query 6. DIRECTIONS tablet ****************/
+    #directions {
+        width: 100%;
+        height: 850px;
+        margin-top: 50px;
+    }
+    .direction-title p {
+        padding-top: unset;
+        margin-top: 50px;
+        margin-left: 150px;
+        font-size: 30px;
+    }
+    .direction-title span {
+        margin-left: 165px;
+        font-size: 15px;
+    }
+    #map {
+        width: 400px;
+        height: 500px;
+        margin-left: unset;
+        margin: 0 10px;
+    }
+    #directions .cont .info {
+        width: 400px;
+        margin-left: unset;
+        margin: 0 10px;
+    }
+    #directions .cont .info .tel,
+    #directions .cont .info .add {
+        margin-left: unset;
+        margin: 0 10px;
+    }
+    #directions .cont .info .line {
+        width: 400px;
+    }
+    #directions .cont .info .tel .one, 
+    #directions .cont .info .add .one{
+        margin-left: -20px;
+        font-size: 18px;
+    }
+    #directions .cont .info .tel .two, 
+    #directions .cont .info .add .two{
+        font-size: 16px;
+    }
+
+/************** media query 6. footer mobile ****************/
+    #footer {
+        height: 331px;
+        background-color: #E9E9E9;
+        width: 425px;
+    }
+    .footer-wrap {
+        width: 425px;
+    }
+    .footer-wrap img {
+        width: 150px;
+        height: 33.75px;
+    }
+    #footer .footer-logo {
+        margin-left: -208px;
+        width: 425px;
+    }
+    .footer-wrap .address {
+        letter-spacing: -0.8px;
+        text-rendering: optimizeSpeed;
+        height: 220px;
+        width: 425px;
+    }
+    .footer-wrap .address .footer-add {
+        margin-left: 190px;
+        font-size: 13px;
+    }
+    .footer-wrap .address .footer-inform {
+        margin-left: 32px;
+        line-height: 1.7;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .footer-wrap .address .footer-inform-add {
+        margin-left: 32px;
+        line-height: 1.7;
+        font-size: 13px;
+        margin-top: 100px;
     }
 }

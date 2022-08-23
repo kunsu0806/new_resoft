@@ -47,12 +47,13 @@ header .container{
     display: flex;
     justify-content: space-between; /* 양 끝으로 배치 */
     align-items: center;
-    width: 100%;
+    width: 1920px;
     border: 1px solid #DBDBDB;
     height: 80px;
     position: fixed;
     top: 0;
     z-index: 1000;
+    background-color: white;
 }
 
 header ul {
@@ -155,7 +156,7 @@ header h1 a img {
 /************************** Hidden **************************/
 .overlay {
     height: 210px;
-    width: 100%;
+    width: 1920px;
     z-index: 1000;
     top: 80px;
     left: 0;
@@ -173,10 +174,10 @@ header h1 a img {
     line-height: 0.7;
 }
 .overlay-content:first-child {
-    margin-left: 1139px;
+    margin-left: 1156px;
 }
 .overlay-content:nth-child(2) {
-    margin-left: -17px;
+    margin-left: -16px;
 }
 .overlay-content:last-child {
     margin-left: 14px;
@@ -307,9 +308,7 @@ header h1 a img {
     width: 1920px;
     height: 820px;
     opacity: 1;
-  
 }
-
 .bkg-left{
     width: 1920px;
     height: 820px;
@@ -322,9 +321,9 @@ header h1 a img {
 }
 
 .moado_title {
-    position: absolute;
     top: 1463px;
     margin-left: 240px;
+    margin-top: 100px;
 }
 
 .moado_title h1 {
@@ -333,7 +332,7 @@ header h1 a img {
 .moado_title p {
     font-size: 18px;
     color: #C8C8C8;
-    text-align: center;
+    margin-left: 30px;
 }
 
 .wrapper {
@@ -477,7 +476,7 @@ header h1 a img {
 .footer-wrap .address .footer-add {
     position: relative;
     height: 24px;
-    left: 460px;
+    margin-left: 450px;
     bottom:20px;
     font-size: 24px;
 }
@@ -489,7 +488,7 @@ header h1 a img {
 }
 .footer-wrap .address .footer-inform-add {
     position:relative;
-    left: 1000px;
+    margin-left: 962px;
     bottom: 50px;
     height: 50px;
     margin-top: -25px;
@@ -499,6 +498,9 @@ header h1 a img {
 /************** media query 1. Header tablet ****************/
 @media (min-width: 769px) and (max-width: 1280px) {
     /******* header *******/
+    header {
+        width: 100%;
+    }
     header h1 a {    
         margin-left: 231.07px;
     }
@@ -507,16 +509,23 @@ header h1 a img {
     }
     header .nav {
         letter-spacing: -2;
+        margin-left: 0px;
+    }
+    header .container {
+        width: 1280px;
     }
     #business-header {
-        width: 1280px;
+        width: 100%;
         height: 300px;
     }
     #business-header h1 {
         font-size: 40px;
     }
+    .overlay {
+        width: 1280px;
+    }
     .overlay-content:first-child {
-        margin-left: 598px;
+        margin-left: 631px;
     }
     .overlay-content:nth-child(2) {
         margin-left: -16px;
@@ -533,7 +542,7 @@ header h1 a img {
 
 /************** media query 2. Ecoce tablet ****************/
     #ecoce {
-        width: 1280px;
+        width: 100%;
         height: 1000px;
     }
 
@@ -543,13 +552,11 @@ header h1 a img {
 
     .title_1 {
         text-align: center;
-        margin-left: -150px;
     }
 
     .title_2 {
         text-align: center;
         margin-bottom: 50px;
-        margin-left: -140px;
     }
 
     .ecoce-right {
@@ -581,7 +588,7 @@ header h1 a img {
     }
 
     .moado_title p {
-        text-align: center;
+        margin-left: 595px;
     }
 
     .wrapper {
@@ -652,7 +659,7 @@ header h1 a img {
         width: 100%
     }
     .footer-wrap .address .footer-add {
-        margin-left: -157px;
+        margin-left: 300px;
         font-size: 18px;
     }
     .footer-wrap .address .footer-inform {
@@ -661,7 +668,7 @@ header h1 a img {
         letter-spacing: -1px;
     }
     .footer-wrap .address .footer-inform-add {
-        margin-left: -291px;
+        margin-left: 727px;
         text-rendering: optimizeSpeed;
         letter-spacing: -1px;
     }
@@ -674,11 +681,15 @@ header h1 a img {
     body {
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
+        width: 100%;
     }
     body::-webkit-scrollbar {
         display: none; /* Chrome, Safari, Opera*/
     }
     header {
+        width: 100%;
+    }
+    header .container {
         width: 768px;
     }
     header h1 a {    
@@ -688,11 +699,13 @@ header h1 a img {
         display: none;
     }
     header ul {
-        left: 458px;
+        margin-left: 528px;
+        margin-top: -40px;
     }
     .overlay {
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
+        width: 768px;
     }
     .overlay::-webkit-scrollbar {
         display: none; /* Chrome, Safari, Opera*/
@@ -710,6 +723,10 @@ header h1 a img {
     }
     .overlay-content {
         letter-spacing: 0;
+        width: 200px;
+    }
+    .overlay-content a {
+        width: 130px;
     }
     .overlay-content:first-child {
         margin-left: 275px;
@@ -793,9 +810,11 @@ header h1 a img {
         margin-left: 30px;
     }
 
-    .moado_title h1,
-    .moado_title p {
+    .moado_title h1 {
         text-align: center;
+    }
+    .moado_title p {
+        margin-left: 340px;
     }
 
     .wrapper {
@@ -831,8 +850,9 @@ header h1 a img {
     }
 
     .moado_middle {
-        top: 415px;
-        left: 250px;
+        margin-left: -430px;
+        margin-top: 212px;
+        width: 260px;
     }
 
     .moado_middle img {
@@ -861,32 +881,38 @@ header h1 a img {
     }
 
     .remainder-ul {
-        margin-left: 15px;
+        margin-left: 10px;
         flex-direction: row;
         flex-wrap: wrap;
-        width: 100%;
+        width: 750px;
     }
 
     .remainder-li {
-        margin-right: 28px;
-        margin-bottom: 28px;
+        margin-right: 22px;
+        margin-bottom: 20px;
     }
     .remainder-ul :nth-child(4){
         margin-left: 130px;
     }
 /************** media query 4.footer mobile ****************/
     #footer {
+        width: 100%;
         height: 341px;
         background-color: #E9E9E9;
     }
+    .footer-wrap {
+        width: 768px;
+    }
     #footer .footer-logo {
         margin-left: -157px;
+        width: 768px;
     }
     .footer-wrap .address {
         letter-spacing: -0.8;
+        width: 768px;
     }
     .footer-wrap .address .footer-add {
-        margin-left: -157px;
+        margin-left: 300px;
         font-size: 18px;
     }
     .footer-wrap .address .footer-inform {
@@ -894,8 +920,290 @@ header h1 a img {
         line-height: 1.7;
     }
     .footer-wrap .address .footer-inform-add {
-        margin-left: -918px;
+        margin-left: 82px;
         margin-top: 90px;
         line-height: 1.7;
+    }
+}
+
+
+
+@media (max-width: 425px) {
+    body {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        width: 100%;
+    }
+    body::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    /******* header *******/
+    header {
+        width: 100%;
+    }
+    header .container {
+        width: 425px;
+    }
+    header h1 a {    
+        margin-left: 20px;
+    }
+    header .nav a {
+        display: none;
+    }
+    header ul {
+        margin-left: 220px;
+        margin-top: -40px;
+    }
+    .overlay {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        width: 425px;
+    }
+    .overlay::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+    }
+    .overlay .mobile {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .overlay .m-line {
+        display: block;
+        padding: 0;
+        border-bottom: 1px solid #9E9E9E;
+        width: 425px;
+        margin-left: -15px;
+    }
+    .overlay-content {
+        letter-spacing: 0;
+        width: 200px;
+    }
+    .overlay-content a {
+        width: 130px;
+        font-size: 15px;
+    }
+    .overlay-content:first-child {
+        margin-left: 15px;
+    }
+    .overlay-content:nth-child(2) {
+        margin-left: 160px;
+        margin-top: -170px;
+    }
+    .overlay-content:last-child {
+        margin-left: 290px;
+        margin-top: -170px;
+    }
+/************** media query 2. Ecoce mobile ****************/
+    #ecoce {
+        width: 425px;
+        height: 1000px;
+    }
+
+    .ecose_7 {
+        margin-top: 50px;
+        margin-left: 0px;
+    }
+
+    .title_1,
+    .title_2 {
+        text-align: center;
+    }
+
+    .ecoce-imga {
+        position: static;
+        float: none;
+        max-height: 1000px;
+        margin: 30 auto;
+    }
+    .ecoce-imga img{
+        height: auto;
+        width: 400px;
+        padding-left: 0px;
+        padding-top: 15px;
+    }
+
+    .ecoce-right {
+        margin-top: 50px;
+        margin-left: inherit;
+        margin-right: inherit;
+        position: static;
+        text-align: center;
+    }
+    .ecoce-right img{
+        width: 400px;
+        height: auto;
+    }
+
+
+    .ex_text {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .ecoce-app {
+        float: none;
+        display: inline-block;
+        margin: 15px;
+    }
+    .ecoce-app p {
+        text-decoration: none;
+    }
+    .ecoce-app li {
+        margin: auto;
+    }
+    .ecoce-app img{
+        width: 30px;
+        height: auto;
+    }
+
+    /******* moado *******/
+    #moado {
+        width: 425px;
+        height: 880px;
+    }
+
+    .bkg-left {
+        width: 425px;
+        height: 880px;
+    }
+
+    .bkg-right {
+        width: 425px;
+        height: 880px;
+    }
+
+    .moado_title {
+        position: static;
+        margin-left: inherit;
+    }
+
+    .moado_title h1 {
+        text-align: center;
+    }
+    .moado_title p {
+        margin-left: inherit;
+        text-align: center;
+    }
+
+    .wrapper {
+        width: 425px;
+        margin-top: 30px;
+    }
+
+    .moado_left img {
+        left: 0px;
+        width: 425px;
+        height: auto;
+    }
+    .moado_right{
+        width: 425px;
+    }
+    .moado_right p {
+        top: 270px;
+        right: 20px;
+        font-size: 20px;
+        left: unset;
+    }
+
+    .moado_right img {
+        right: 20px;
+        top: 330px;
+        width: 315px;
+        height: auto;
+        left: unset;
+    }
+
+    .moado_right button {
+        top: 430px;
+        right: 20px;
+        left: unset;
+    }
+
+    .moado_middle {
+        margin-left: -675px;
+        margin-top: 290px;
+        width: 260px;
+    }
+
+    .moado_middle img {
+        width: 390px;
+        height: auto;
+    }
+
+    /******* ETC *******/
+    #remainder {
+        width: 425px;
+        height: 2200px;
+    }
+    .remainder-text{
+        text-align: center;
+    }
+
+    .remainder-text :nth-child(1) {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .remainder-text :nth-child(2) {
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .remainder-container {
+        width: 425px;
+    }
+
+    .remainder-ul {
+        margin-left: unset;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 425px;
+    }
+
+    .remainder-li {
+        margin-right: unset;
+        margin-bottom: 20px;
+    }
+    .remainder-ul :nth-child(4){
+        margin-left: unset;
+    }
+
+/************** media query 6. footer mobile ****************/
+    #footer {
+        height: 331px;
+        background-color: #E9E9E9;
+        width: 425px;
+    }
+    .footer-wrap {
+        width: 425px;
+    }
+    .footer-wrap img {
+        width: 150px;
+        height: 33.75px;
+    }
+    #footer .footer-logo {
+        margin-left: -208px;
+        width: 425px;
+    }
+    .footer-wrap .address {
+        letter-spacing: -0.8px;
+        text-rendering: optimizeSpeed;
+        height: 220px;
+        width: 425px;
+    }
+    .footer-wrap .address .footer-add {
+        margin-left: 190px;
+        font-size: 13px;
+    }
+    .footer-wrap .address .footer-inform {
+        margin-left: 32px;
+        line-height: 1.7;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .footer-wrap .address .footer-inform-add {
+        margin-left: 32px;
+        line-height: 1.7;
+        font-size: 13px;
+        margin-top: 100px;
     }
 }

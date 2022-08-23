@@ -89,14 +89,20 @@ header button {
 }
 
 /************************************* 로고 ****************************************/
-header h1 a { 
+header h1 a img {
+    width: 133px;
+    height: 30px;
+}
+header h1 a .bh {
+    display: block;
     font-weight: bold;
     color: white;
     margin-left: 360px;
 }
-header h1 a img {
-    width: 133px;
-    height: 30px;
+header h1 a .af {
+    display: none;
+    font-weight: bold;
+    margin-left: 360px;
 }
 
 /*************************** 메뉴 ********************************/
@@ -597,6 +603,8 @@ span.cbp-biprev:before {
 }
 .aniimg_small {
     display: none;
+    width: 534px;
+    height: 534px;
 }
 
 .right {
@@ -743,6 +751,17 @@ span.cbp-biprev:before {
     margin-bottom: -100px;
 }
 
+.refer_header .refer_header_p1 {
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
+.refer_header .refer_header_p2 {
+    color: #C8C8C8;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
 .refer_web {
     left: 240px; 
     width: 1440px;
@@ -832,8 +851,8 @@ span.cbp-biprev:before {
     header .container {
         width: 1280px;
     }
-    header h1 a {    
-        margin-left: 140px;
+    header .container h1 {    
+        margin-left: -220px;
     }
     header .nav {
         margin-left: 265px;
@@ -1063,11 +1082,11 @@ span.cbp-biprev:before {
         width: 768px;
         z-index: 1000;
     }
-    header h1 a {    
-        margin-left: 32px;
+    header .container h1 {    
+        margin-left: -328px;
     }
     header .nav {
-        margin-right: -228px;
+        margin-left: 638px;
     }
     header .nav a {
         display: none;
@@ -1283,19 +1302,6 @@ span.cbp-biprev:before {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 425px) {
     body {
         -ms-overflow-style: none; /* IE and Edge */
@@ -1305,14 +1311,26 @@ span.cbp-biprev:before {
         display: none; /* Chrome, Safari, Opera*/
     }
 /************** media query 1. Header mobile ****************/
+    header {
+        width: 100%;
+    }
     header .container {
         width: 425px;
+    }
+    header h1 {
+        height: 80px;
     }
     header h1 a {    
         margin-left: 10px;
     }
+    header h1 a img {
+        margin-top: -20px;
+    }
     header nav ul li {
         padding: 0;
+    }
+    header .nav {
+        margin-left: 468px;
     }
     header .nav a {
         display: none;
@@ -1322,10 +1340,12 @@ span.cbp-biprev:before {
     }
     .overlay {
         width: 425px;
+        height: 200px;
     }
     .overlay .mobile {
         display: block;
         margin-bottom: 10px;
+        width: 100px;
     }
     .overlay .m-line {
         display: block;
@@ -1336,16 +1356,22 @@ span.cbp-biprev:before {
     }
     .overlay-content {
         letter-spacing: 0;
+        width: 200px;
+    }
+    .overlay-content a {
+        width: 130px;
+        font-size: 15px;
     }
     .overlay-content:first-child {
         margin-left: 20px;
     }
     .overlay-content:nth-child(2) {
-        margin-left: -335px;
-        margin-top: 15px;
+        margin-left: 150px;
+        margin-top: -170px;
     }
     .overlay-content:last-child {
-        margin-left: 240px;
+        margin-left: 260px;
+        margin-top: -170px;
     }
     .hd-1 {
         margin-left: -100px;
@@ -1367,6 +1393,9 @@ span.cbp-biprev:before {
     }
     .news .title{
         text-align: center;
+    }
+    .news .title :first-child {
+        font-size: 30px;
     }
     .news .cont {
         display: grid;
@@ -1390,7 +1419,6 @@ span.cbp-biprev:before {
     .pject-wrap {
         width: 100%;
         height: 1500px;
-        z-index: 80;
         position: relative;
     }
     .pject-con-wrap {
@@ -1425,209 +1453,49 @@ span.cbp-biprev:before {
     .motion-pic-2 {
         display: block;
         margin-left: 0px;
-        width: 430px;
-        height: 374px;
+        width: 425px;
+        height: 370px;
     }
     .pject-ecoce-wrap {
         margin-left: 0px;
         top: 450px;
-        width: 430px;
-        height: 374px;
+        width: 425px;
+        height: 370px;
     }
     .pject-moado-wrap {
         margin-left: 0px;
         top: 450px;
-        width: 430px;
-        height: 374px;
+        width: 425px;
+        height: 370px;
     }
-}
-
-@media (max-width: 320px) {
-    body {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-        width: 320px;
-    }
-    body::-webkit-scrollbar {
-        display: none; /* Chrome, Safari, Opera*/
-    }
-/************** media query 1. Header mobile ****************/
-    header h1 a {    
-        margin-left: 10px;
-    }
-    header nav ul li {
-        padding: 0;
-    }
-    header .nav a {
-        display: none;
-    }
-    header .nav .btn {
-        margin-left: -1260px;
-    }
-    .overlay {
-        width: 320px;
-        height: 180px;
-    }
-    .overlay .mobile {
-        display: block;
-        margin-bottom: 10px;
-    }
-    .overlay .m-line {
-        display: block;
-        padding: 0;
-        border-bottom: 1px solid #9E9E9E;
-        width: 768px;
-        margin-left: -255px;
-    }
-    .overlay-content {
-        letter-spacing: 0;
-    }
-    .overlay-content a {
-        font-size: 12px;
-    }
-    .overlay-content:first-child {
-        margin-left: 10px;
-    }
-    .overlay-content:nth-child(2) {
-        margin-left: -470px;
-        margin-top: 15px;
-    }
-    .overlay-content:last-child {
-        margin-left: 190px;
-        margin-top: -157px;
-    }
-    .hd-1 {
-        margin-left: -150px;
-        margin-top: -100px;
-    }
-    .hd-1 p.sub-text {
-        font-size: 15px;
-    }
-    .cbp-bicontrols {
-        margin-left: 10px;
-        padding-top: 40px;
-    }
-/************** media query 2. news mobile ****************/
-    .news{
-        width: 320px;
-        margin: 0;
-        margin-bottom: -400px;
-        margin-top: 145px;
-    }
-    .news .title{
-        text-align: center;
-    }
-    .news .title :first-child {
-        font-size: 25px;
-    }
-    .news .cont .link a :nth-child(2) {
-        font-size: 15px;
-    }
-    .news .cont .link a :nth-child(3) {
-        font-size: 12px;
-    }
-    .news .cont {
-        display: grid;
-        grid-template-columns: repeat(2, 143px);
-        grid-template-rows: 0.1fr 0.1fr;
-        justify-content: center;
-        gap: 5px 5px;
-        margin-left: 20px;
-    }
-    .news .cont .link a .img-wrap {
-        width: 120px;
-        height: 80px;
-        max-width: 120px;
-        max-height: 80px;
-    }
-    .news .cont .line1,
-    .news .cont .line2,
-    .news .cont .line3 {
-        display: none;
-    }
-    /************** media query 3. project mobile ****************/
-    .pject-wrap {
-        width: 100%;
-        height: 1150px;
-        z-index: 80;
-        position: relative;
-    }
-    .pject-con-wrap {
-        margin: 0 auto;
-        display: block;
-    }
-    .pject-text {
-        text-align: center;
-        margin-top: -770px;
-    }   
-    .pject-text h2 {
-        font-weight: bold;
-        font-size: 25px;
-        color: #1E1E1E;
-    }
-    .pject-text .pject-eng {
-        color: #C8C8C8;
-        padding-bottom: 50px;
-        font-weight: Medium;
-        font-size: 15px;
-    }
-    .pject-text .pject-con {
-        color: #1E1E1E;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 2;
-        letter-spacing: -0.5;
-    }
-    .motion-pic-1 {
-        display: none;
-    }
-    .motion-pic-2 {
-        display: block;
-        margin-left: 0px;
-        width: 310px;
-        height: 270px;
-    }
-    .pject-ecoce-wrap {
-        margin-left: 5px;
-        top: 320px;
-        width: 310px;
-        height: 270px;
-    }
-    .pject-moado-wrap {
-        margin-left: 5px;
-        top: 300px;
-        width: 310px;
-        height: 270px;
-    }
-    .pject-ecoce-wrap figcaption:hover {
-        padding: 200px 0 0 21px;
-        font-size: 15px;
-    }
-    .pject-moado-wrap figcaption:hover {
-        padding: 220px 0 0 21px;
-        font-size: 15px;
-    }
-/************** media query 4. service mobile ****************/
+    /************** media query 4. service mobile ****************/
     .service {
-        height: 1853px;
+        width: 100%;
+        height: 1253px;
         background-color: #F2F6FC;
         margin-top: -100px;
         padding-top: 50px;
     }
+    .service .left {
+        width: 425px;
+    }
+    .service .left .title {
+        width: 425px;
+    } 
     .service .left .title :nth-child(1) {
-        margin-left: 124px;
+        margin-left: 180px;
         font-size: 25px;
     }
     .service .left .title :nth-child(2) {
-        margin-left: 134px;
+        margin-left: 188px;
         font-size: 15px;
     }
     .service .left .title :nth-child(3) {
         margin-left: 0px;
         text-rendering: optimizeSpeed;
         letter-spacing: -1.8px;
-        font-size: 16px;
-        width: 320px;
+        font-size: 21px;
+        width: 425px;
         text-align: center;
     }
     .aniimg {
@@ -1635,20 +1503,106 @@ span.cbp-biprev:before {
     }
     .aniimg_small {
         display: block;
-        margin-left: 117px;
-        margin-top: -60px;
+        margin-left: 0.5px;
+        margin-top: -30px;
+        width: 425px;
+        height: 370px;
     }
     .right {
-        top: 44.2%;
-        left: -78.3%;
-        margin-left: -96px;
+        top: 50%;
+        left: -86.5%;
+    }
+    .right .back p {
+        font-size: 15px;
+    }
+    .app, .web, .ai, .xr {
+        width: 150px;
+        height: 187.5px;
+    }
+    .right .front :nth-child(1) {
+        font-size: 15px;
+    }
+    .right .front :nth-child(2) {
+        font-size: 15px;
     }
     .web {
         position: absolute;
-        left: 355px;
+        margin-left: -160px;
     }
     .xr {
         position: absolute;
-        left: 355px;
+        margin-left: -160px;
+    }
+    .ai, .xr {
+        margin-top: -240px;
+    }
+    /************** media query 5. reference mobile ****************/
+    #Reference {
+        position:relative;
+        width: 425px;
+        left: -105px;
+        height: auto;
+    }
+    .refer_web {
+        width: 400px;
+        margin-left: -120px;
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .refer_header {
+        text-align: center;
+    }
+    .refer_web ul {
+        margin-left: 24px;
+    }
+    .Reference_iconbox {
+        margin-top: 20px;
+        margin-right: 20px;
+        width: 100px;
+        height: 45.45px;
+    }
+    .icon-image .icon {
+        width:  90px !important;
+        height: 25px !important;
+        margin-top: -30px;
+    }
+/************** media query 6. footer mobile ****************/
+    #footer {
+        height: 331px;
+        background-color: #E9E9E9;
+        width: 425px;
+    }
+    .footer-wrap {
+        width: 425px;
+    }
+    .footer-wrap img {
+        width: 150px;
+        height: 33.75px;
+    }
+    #footer .footer-logo {
+        margin-left: -208px;
+        width: 425px;
+    }
+    .footer-wrap .address {
+        letter-spacing: -0.8px;
+        text-rendering: optimizeSpeed;
+        height: 220px;
+        width: 425px;
+    }
+    .footer-wrap .address .footer-add {
+        margin-left: 190px;
+        font-size: 13px;
+    }
+    .footer-wrap .address .footer-inform {
+        margin-left: 32px;
+        line-height: 1.7;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    .footer-wrap .address .footer-inform-add {
+        margin-left: 32px;
+        line-height: 1.7;
+        font-size: 13px;
+        margin-top: 100px;
     }
 }
